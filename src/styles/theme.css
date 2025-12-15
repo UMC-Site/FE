@@ -1,0 +1,102 @@
+@theme {
+  /* Primary 색상 */
+  --color-primary-50: #eeeeff;
+  --color-primary-100: #e0e1ff;
+  --color-primary-200: #c7c8fe;
+  --color-primary-300: #a5a7fc;
+  --color-primary-400: #8184f8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4649e5;
+  --color-primary-700: #383bca;
+  --color-primary-800: #3032a3;
+  --color-primary-900: #2e3081;
+  --color-primary-950: #1b1c4b;
+
+  /* Gray 색상 */
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #eeeeee;
+  --color-gray-300: #e0e0e0;
+  --color-gray-400: #bdbdbd;
+  --color-gray-500: #9e9e9e;
+  --color-gray-600: #757575;
+  --color-gray-700: #616161;
+  --color-gray-800: #424242;
+  --color-gray-900: #212121;
+  --color-gray-950: #0a0a0a;
+
+  /* 보조 색상 */
+  --color-secondary: #a855f7;
+  --color-tertiary: #ec4899;
+  --color-quaternary: #f97316;
+  --color-quinary: #10b981;
+
+  /* 배경 색상 */
+  --color-background-1: #000215;
+  --color-background-2: #0c1b53;
+  --color-background-3: #0e2eaa;
+
+  /* 배너 배경 */
+  --color-banner-bg-1: #050d31;
+  --color-banner-bg-2: #430060;
+  --color-banner-bg-3: #82007f;
+  --color-banner-bg-4: #ff96e5;
+
+  /* 인트로 색상 */
+  --color-intro: #f3f3f3;
+  --color-intro-2: #e7e7e7;
+
+  /* 푸터 색상 */
+  --color-footer: #000629;
+  --color-footer-2: #dddddd;
+  --color-footer-3: #8e8e8e;
+
+  /* 네비게이션바 배경 */
+  --color-navbar: #000629;
+
+  /* 메뉴 색상 */
+  --color-menu-bg: #0a0a0a;
+  --color-menu: #868b93;
+
+  /* 리크루트 색상 */
+  --color-recruit: #c4c4c4;
+  --color-recruit-2: #78e5d8;
+  --color-recruit-3: #4a0037;
+  --color-recruit-4: #071038;
+  --color-recruit-6: #86fff0;
+  --color-recruit-7: #da68be;
+  --color-recruit-8: #f6fff7;
+  --color-recruit-9: #1b0014;
+  --color-recruit-10: #621c51;
+  --color-recruit-11: #995a89;
+
+  /* 스태프 로그인 색상 */
+  --color-staff-login: #e4e4e4;
+  --color-staff-login-2: #040b2c;
+
+  /* QnA 색상 */
+  --color-qna: #d2d2d2;
+  --color-qna-2: #dfe3e8;
+  --color-qna-3: #00ffd1;
+
+  /* 모달 색상 */
+  --color-modal: #1e1e1e;
+  --color-modal-2: #e3e3e3;
+
+  /* 포토 색상 */
+  --color-photo: #3b3b3b;
+  --color-photo-2: #78e5d8;
+  --color-photo-3: #3d405d;
+
+  /* 기본 색상 */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* 그라데이션 색상 */
+  --gradient-background: linear-gradient(
+    180deg,
+    var(--color-background-1) 0%,
+    var(--color-background-2) 65%,
+    var(--color-background-3) 84%
+  );
+}
