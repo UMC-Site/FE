@@ -1,5 +1,11 @@
+import Title from "@/components/Title/Title";
+
 const ProjectsList = () => {
-  return <>ProjectsList</>;
+  return (
+    <>
+      <Title text="Project" />
+    </>
+  );
 };
 
 export default ProjectsList;

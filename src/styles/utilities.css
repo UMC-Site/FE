@@ -11,4 +11,14 @@
   .no-scroll {
     @apply overflow-hidden fixed w-full;
   }
+
+  .pageContainer {
+    @apply w-[68%];
+  }
+
+  @media screen and (max-width: 430px) {
+    .pageContainer {
+      @apply w-full px-[1.8rem];
+    }
+  }
 }
