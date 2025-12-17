@@ -6,7 +6,7 @@ const RootLayout = () => {
   return (
     <div className="flex min-h-screen flex-col items-center">
       <Navbar />
-      <main className="flex-1 w-full">
+      <main className="flex-1 pageContainer">
         <Outlet />
       </main>
       <Footer />

@@ -1,11 +1,11 @@
 import Title from "@/components/Title/Title";
 
-const Qna = () => {
+const Recruit = () => {
   return (
     <>
-      <Title text="Q&A" />
+      <Title text="Recruit" />
     </>
   );
 };
 
-export default Qna;
+export default Recruit;

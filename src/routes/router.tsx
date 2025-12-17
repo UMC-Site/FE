@@ -11,6 +11,7 @@ const ProjectDetailPage = lazy(
   () => import("../pages/projects/projectDetail/ProjectDetail")
 );
 const QnaPage = lazy(() => import("../pages/qna/Qna"));
+const RecruitPage = lazy(() => import("../pages/recruit/Recruit"));
 const NotFoundPage = lazy(() => import("../pages/notFound/NotFound"));
 
 const router = createBrowserRouter([
@@ -43,6 +44,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Spinner />}>
             <QnaPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "recruit",
+        element: (
+          <Suspense fallback={<Spinner />}>
+            <RecruitPage />
           </Suspense>
         ),
       },
