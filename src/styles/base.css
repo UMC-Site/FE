@@ -21,7 +21,7 @@
   html,
   body,
   #root {
-    @apply w-full h-full;
+   @apply w-full;
   }
 
   body {
@@ -29,6 +29,7 @@
     background-size: 100%;
     background-repeat: repeat;
     background: var(--gradient-background);
+    
     @apply flex justify-center;
   }
 
