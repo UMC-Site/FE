@@ -21,7 +21,7 @@
   html,
   body,
   #root {
-   @apply w-full;
+    @apply w-full;
   }
 
   body {
@@ -61,7 +61,6 @@
   }
 
   input,
-  button,
   textarea,
   select {
     @apply outline-none border-none bg-transparent;
