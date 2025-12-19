@@ -13,7 +13,7 @@ const Qna = () => {
     QnaData.find((item) => item.type === selectedType)?.qna ?? [];
 
   return (
-    <>
+    <div className="pageContainer">
       <Title text="FAQ" />
 
       <ListFilter
@@ -23,7 +23,7 @@ const Qna = () => {
       />
 
       <ListQna qnaList={selectedQna} />
-    </>
+    </div>
   );
 };
 
