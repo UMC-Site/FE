@@ -4,7 +4,7 @@ interface TitleProps {
 
 const Title = ({ text }: TitleProps) => {
   return (
-    <h1 className="mt-[2.4rem] min-[431px]:mt-12 text-[2.8rem] min-[431px]:text-[3.6rem]">
+    <h1 className="mt-[clamp(2.4rem,4vw,3rem)] text-[clamp(2.8rem,4vw,3.6rem)] font-medium">
       {text}
     </h1>
   );

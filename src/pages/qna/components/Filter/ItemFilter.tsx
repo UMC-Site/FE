@@ -1,0 +1,34 @@
+import type { QnaType } from "@/types/qna/qna";
+import clsx from "clsx";
+
+interface ItemFilterProps {
+  type: QnaType;
+  isSelected: boolean;
+  onClick: () => void;
+}
+
+const ItemFilter = ({ type, isSelected, onClick }: ItemFilterProps) => {
+  return (
+    <button
+      onClick={onClick}
+      aria-pressed={isSelected}
+      className={clsx(
+        `
+        px-[clamp(1rem,3vw,2rem)]
+        py-[clamp(0.4rem,1.5vw,0.8rem)]
+        rounded-[clamp(25rem,60vw,50rem)]
+        border-[clamp(0.05rem,0.3vw,0.1rem)] 
+        border-banner-bg-4
+        font-medium
+        text-[clamp(1.4rem,3vw,2.8rem)]
+        text-banner-bg-4
+        `,
+        isSelected && "bg-banner-bg-4 text-footer font-semibold"
+      )}
+    >
+      {type}
+    </button>
+  );
+};
+
+export default ItemFilter;
