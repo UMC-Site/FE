@@ -10,3 +10,13 @@ export const loadImages = (imageImport: ImageImport, basePath: string) => {
     {} as Record<string, string>
   );
 };
+
+export const getImages = (
+  img: Record<string, string>,
+  projectName: string
+) => ({
+  projectWeb: img[`${projectName}/${projectName}Web`],
+  projectMobile: img[`${projectName}/${projectName}Mobile`],
+  projectDetailWeb: img[`${projectName}/${projectName}DetailWeb`],
+  projectDetailMobile: img[`${projectName}/${projectName}DetailMobile`],
+});
