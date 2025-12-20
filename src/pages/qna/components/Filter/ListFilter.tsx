@@ -1,5 +1,5 @@
-import ItemFilter from "./ItemFilter";
 import type { QnaType } from "@/types/qna/qna";
+import ItemFilter from "./ItemFilter";
 
 interface ListFilterProps {
   types: readonly QnaType[];
@@ -9,7 +9,7 @@ interface ListFilterProps {
 
 const ListFilter = ({ types, selectedType, onSelectType }: ListFilterProps) => {
   return (
-    <div className="flex items-center gap-[clamp(0.8rem,2vw,2rem)] mt-[clamp(2.6rem,5vw,7rem)] mb-[clamp(2.3rem,5vw,8rem)]">
+    <div className="mt-[clamp(2.6rem,5vw,7rem)] mb-[clamp(2.3rem,5vw,8rem)] flex items-center gap-[clamp(0.8rem,2vw,2rem)]">
       {types.map((type) => (
         <ItemFilter
           key={type}

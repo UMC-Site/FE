@@ -1,5 +1,5 @@
-import { useState } from "react";
 import clsx from "clsx";
+import { useState } from "react";
 import ArrowDown from "../../../../assets/images/icons/arrowDown.svg";
 
 interface ItemQnaProps {
@@ -17,21 +17,14 @@ const ItemQna = ({ question, answer }: ItemQnaProps) => {
         className="relative w-full text-left"
         aria-expanded={isOpen}
       >
-        <div className="flex items-start gap-[clamp(0.316rem,1.5vw,1.1rem)] text-[clamp(1.3rem,2.5vw,3rem)] text-intro max-w-[90%]">
-          <span className="font-semibold shrink-0">Q.</span>
+        <div className="flex max-w-[90%] items-start gap-[clamp(0.316rem,1.5vw,1.1rem)] text-[clamp(1.3rem,2.5vw,3rem)] text-intro">
+          <span className="shrink-0 font-semibold">Q.</span>
 
-          <div className="flex flex-col w-fit">
+          <div className="flex w-fit flex-col">
             <span className="font-medium">{question}</span>
 
             {isOpen && (
-              <p
-                className="
-                  mt-[clamp(1.15rem,4vw,4rem)]
-                  text-[clamp(1.1rem,3vw,2.6rem)]
-                  text-modal-2
-                  leading-[1.4]
-                "
-              >
+              <p className="mt-[clamp(1.15rem,4vw,4rem)] text-[clamp(1.1rem,3vw,2.6rem)] text-modal-2 leading-[1.4]">
                 {answer}
               </p>
             )}
@@ -40,7 +33,7 @@ const ItemQna = ({ question, answer }: ItemQnaProps) => {
 
         <img
           className={clsx(
-            "absolute right-0 top-0 transition-transform duration-300 w-[clamp(1.6rem,4vw,3.6rem)]",
+            "absolute top-0 right-0 w-[clamp(1.6rem,4vw,3.6rem)] transition-transform duration-300",
             isOpen && "rotate-180"
           )}
           src={ArrowDown}

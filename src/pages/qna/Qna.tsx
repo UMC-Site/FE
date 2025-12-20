@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Title from "@/components/Title/Title";
 import { QnaData } from "@/mocks/qna/qnaData";
-import ListFilter from "./components/Filter/ListFilter";
-import ListQna from "./components/Qna/ListQna";
 import type { QnaType } from "@/types/qna/qna";
 import { QNA_TYPES } from "@/types/qna/qna";
+import ListFilter from "./components/Filter/ListFilter";
+import ListQna from "./components/Qna/ListQna";
 
 const Qna = () => {
   const [selectedType, setSelectedType] = useState<QnaType>("기획");

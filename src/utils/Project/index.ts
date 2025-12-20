@@ -1,8 +1,8 @@
 import type { Project } from "@/types/project";
 import {
   type FilterType,
-  type GenerationType,
   GENERATIONS,
+  type GenerationType,
   toGenerationType,
 } from "./config";
 
@@ -34,9 +34,7 @@ export const getFilteredProjects = (filter: FilterType): Project[] => {
   return projectsByGeneration[filter] || [];
 };
 
-export const getProjectsByGeneration = (
-  gen: GenerationType
-): Project[] => {
+export const getProjectsByGeneration = (gen: GenerationType): Project[] => {
   return projectsByGeneration[gen] || [];
 };
 
