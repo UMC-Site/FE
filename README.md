@@ -70,3 +70,59 @@
 > <li> 🔥 Remove: 파일을 삭제하는 작업만 수행한 경우 [:fire]
 > <li> ⏪️ Revert: 전 버전으로 롤백 [:rewind]
 
+---
+
+## 📁 새 기수 추가 가이드
+
+새로운 기수(예: 9기)를 추가할 때 아래 3단계만 따르면 됩니다.
+
+### 1. 이미지 추가
+
+`src/assets/images/project/project_9/` 폴더 생성 후 프로젝트별 이미지 추가
+
+```
+project_9/
+├── 프로젝트명1/
+│   ├── 프로젝트명1Web.png
+│   ├── 프로젝트명1Mobile.png
+│   ├── 프로젝트명1DetailWeb.png
+│   └── 프로젝트명1DetailMobile.png
+├── 프로젝트명2/
+└── ...
+```
+
+### 2. 데이터 파일 생성
+
+`src/utils/Project/generations/9/data.ts` 파일 생성 (8기 형식 참고)
+
+```typescript
+import type { Project } from "@/types/project";
+import { loadImages } from "../../loadImages";
+
+const imageImport = import.meta.glob("@/assets/images/project/project_9/**/*.png", {
+  eager: true,
+});
+const img = loadImages(
+  imageImport as Record<string, { default: string }>,
+  "/src/assets/images/project/project_9/"
+);
+
+export const data: Project[] = [
+  // 프로젝트 데이터 추가
+];
+```
+
+### 3. config 수정
+
+`src/utils/Project/config.ts`에서 기수 번호만 추가
+
+```typescript
+// 변경 전
+export const GENERATIONS = ["6", "7", "8"] as const;
+
+// 변경 후
+export const GENERATIONS = ["6", "7", "8", "9"] as const;
+```
+
+> 타입, 필터 버튼, 프로젝트 목록 등 모든 것이 자동으로 반영됩니다.
+
