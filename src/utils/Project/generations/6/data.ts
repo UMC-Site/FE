@@ -1,16 +1,22 @@
 import type { Project } from "@/types/project";
-import { generation6Images } from "../images/generation6Images";
+import { loadImages } from "../../loadImages";
 
-const img = generation6Images;
+const imageImport = import.meta.glob("@/assets/images/project/project_6/**/*.png", {
+  eager: true,
+});
+const img = loadImages(
+  imageImport as Record<string, { default: string }>,
+  "/src/assets/images/project/project_6/"
+);
 
-export const generation6Data: Project[] = [
+export const data: Project[] = [
   {
     id: 1,
     type: "6기",
-    projectWeb: img.stepper.web,
-    projectMobile: img.stepper.mobile,
-    projectDetailWeb: img.stepper.detailWeb,
-    projectDetailMobile: img.stepper.detailMobile,
+    projectWeb: img["stepper/stepperWeb"],
+    projectMobile: img["stepper/stepperMobile"],
+    projectDetailWeb: img["stepper/stepperDetailWeb"],
+    projectDetailMobile: img["stepper/stepperDetailMobile"],
     title: "STEPPER",
     detailExplain:
       "딱 맞는 운동 루틴을 만들어 빠르게 회복할 수 있으며, AI를 활용한 통증 부위에 맞는 운동 추천 서비스부터 운동 컨디션 평가까지 만능 재활 맞춤 서비스입니다.",
@@ -29,10 +35,10 @@ export const generation6Data: Project[] = [
   {
     id: 2,
     type: "6기",
-    projectWeb: img.wesave.web,
-    projectMobile: img.wesave.mobile,
-    projectDetailWeb: img.wesave.detailWeb,
-    projectDetailMobile: img.wesave.detailMobile,
+    projectWeb: img["wesave/wesaveWeb"],
+    projectMobile: img["wesave/wesaveMobile"],
+    projectDetailWeb: img["wesave/wesaveDetailWeb"],
+    projectDetailMobile: img["wesave/wesaveDetailMobile"],
     title: "WE SAVE",
     detailExplain:
       "우리 주변에 발생하는 사건, 사고들을 직접 제보하고 공유하여 우리 주변의 이웃들을 구하는 서비스입니다.",
@@ -49,10 +55,10 @@ export const generation6Data: Project[] = [
   {
     id: 3,
     type: "6기",
-    projectWeb: img.kioki.web,
-    projectMobile: img.kioki.mobile,
-    projectDetailWeb: img.kioki.detailWeb,
-    projectDetailMobile: img.kioki.detailMobile,
+    projectWeb: img["kioki/kiokiWeb"],
+    projectMobile: img["kioki/kiokiMobile"],
+    projectDetailWeb: img["kioki/kiokiDetailWeb"],
+    projectDetailMobile: img["kioki/kiokiDetailMobile"],
     title: "키오키",
     detailExplain:
       "키오스크 이용의 어려움을 해결하기 위해 실제 브랜드의 키오스크 화면을 제공하고 언제든지 이용법을 볼 수 있는 서비스입니다.",
@@ -70,10 +76,10 @@ export const generation6Data: Project[] = [
   {
     id: 4,
     type: "6기",
-    projectWeb: img.plancapsule.web,
-    projectMobile: img.plancapsule.mobile,
-    projectDetailWeb: img.plancapsule.detailWeb,
-    projectDetailMobile: img.plancapsule.detailMobile,
+    projectWeb: img["plancapsule/plancapsuleWeb"],
+    projectMobile: img["plancapsule/plancapsuleMobile"],
+    projectDetailWeb: img["plancapsule/plancapsuleDetailWeb"],
+    projectDetailMobile: img["plancapsule/plancapsuleDetailMobile"],
     title: "플랜캡슐",
     detailExplain:
       "흐지부지 잊어버리게 되는 목표를 지속적으로 리마인드 해 이를 이룰 수 있도록 하며, 목표 관리의 빈틈을 채워줄 수 있는 서비스입니다.",
@@ -87,10 +93,10 @@ export const generation6Data: Project[] = [
   {
     id: 5,
     type: "6기",
-    projectWeb: img.veganing.web,
-    projectMobile: img.veganing.mobile,
-    projectDetailWeb: img.veganing.detailWeb,
-    projectDetailMobile: img.veganing.detailMobile,
+    projectWeb: img["veganing/veganingWeb"],
+    projectMobile: img["veganing/veganingMobile"],
+    projectDetailWeb: img["veganing/veganingDetailWeb"],
+    projectDetailMobile: img["veganing/veganingDetailMobile"],
     title: "비거닝",
     detailExplain:
       "비건의 진입 장벽을 낮추고자 기획되었으며, 비건 레시피/식당 정보 및 레시피 공모기능, 개인맞춤 비건 영양 정보 그래프 분석 제공 서비스입니다.",
@@ -108,10 +114,10 @@ export const generation6Data: Project[] = [
   {
     id: 6,
     type: "6기",
-    projectWeb: img.seokbakji.web,
-    projectMobile: img.seokbakji.mobile,
-    projectDetailWeb: img.seokbakji.detailWeb,
-    projectDetailMobile: img.seokbakji.detailMobile,
+    projectWeb: img["seokbakji/seokbakjiWeb"],
+    projectMobile: img["seokbakji/seokbakjiMobile"],
+    projectDetailWeb: img["seokbakji/seokbakjiDetailWeb"],
+    projectDetailMobile: img["seokbakji/seokbakjiDetailMobile"],
     title: "석박지",
     project: "https://github.com/SukBakJi/SukBakJi-iOS",
     detailExplain:
@@ -130,10 +136,10 @@ export const generation6Data: Project[] = [
   {
     id: 7,
     type: "6기",
-    projectWeb: img.routeporter.web,
-    projectMobile: img.routeporter.mobile,
-    projectDetailWeb: img.routeporter.detailWeb,
-    projectDetailMobile: img.routeporter.detailMobile,
+    projectWeb: img["routeporter/routeporterWeb"],
+    projectMobile: img["routeporter/routeporterMobile"],
+    projectDetailWeb: img["routeporter/routeporterDetailWeb"],
+    projectDetailMobile: img["routeporter/routeporterDetailMobile"],
     title: "루트포터",
     detailExplain:
       "AI와 간단한 질문들에 문답을 하며, 취향 기반으로 다양한 여행지를 추천하는 기능을 가지고 있습니다.",

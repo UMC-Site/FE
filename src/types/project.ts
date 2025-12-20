@@ -1,4 +1,8 @@
-export type GenerationType = "6기" | "7기" | "8기";
+export type {
+  FilterType,
+  GenerationNumber,
+  GenerationType,
+} from "@/utils/Project/config";
 
 export interface ProjectPerson {
   id: number;
@@ -21,7 +25,7 @@ export interface ProjectSubTitle {
 
 export interface Project {
   id: number;
-  type: GenerationType;
+  type: import("@/utils/Project/config").GenerationType;
   projectWeb: string;
   projectMobile: string;
   projectDetailWeb: string;
@@ -33,5 +37,3 @@ export interface Project {
   feel?: ProjectFeel[];
   subTitle: ProjectSubTitle[];
 }
-
-export type FilterType = "ALL" | GenerationType;
