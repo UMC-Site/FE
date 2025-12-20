@@ -80,13 +80,15 @@
 
 `src/assets/images/project/project_9/` 폴더 생성 후 프로젝트별 이미지 추가
 
+> **중요**: 폴더명과 이미지 파일명 prefix가 반드시 일치해야 합니다!
+
 ```
 project_9/
-├── 프로젝트명1/
-│   ├── 프로젝트명1Web.png
-│   ├── 프로젝트명1Mobile.png
-│   ├── 프로젝트명1DetailWeb.png
-│   └── 프로젝트명1DetailMobile.png
+├── 프로젝트명1/                    # 프로젝트명1
+│   ├── 프로젝트명1Web.png          # 프로젝트명1 + Web
+│   ├── 프로젝트명1Mobile.png       # 프로젝트명1 + Mobile
+│   ├── 프로젝트명1DetailWeb.png    # 프로젝트명1 + DetailWeb
+│   └── 프로젝트명1DetailMobile.png # 프로젝트명1 + DetailMobile
 ├── 프로젝트명2/
 └── ...
 ```
@@ -97,18 +99,25 @@ project_9/
 
 ```typescript
 import type { Project } from "@/types/project";
-import { loadImages } from "../../loadImages";
+import { getImages, loadImages } from "../../loadImages";
 
-const imageImport = import.meta.glob("@/assets/images/project/project_9/**/*.png", {
-  eager: true,
-});
+const imageImport = import.meta.glob(
+  "@/assets/images/project/project_9/**/*.png",
+  { eager: true }
+);
 const img = loadImages(
   imageImport as Record<string, { default: string }>,
   "/src/assets/images/project/project_9/"
 );
 
 export const data: Project[] = [
-  // 프로젝트 데이터 추가
+  {
+    id: 31,
+    type: "9기",
+    ...getImages(img, "프로젝트명1"), // 프로젝트명1 입력하면 4개 이미지 자동 매핑
+    title: "프로젝트 제목",
+    // ... 나머지 데이터
+  },
 ];
 ```
 
