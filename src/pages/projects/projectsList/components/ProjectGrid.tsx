@@ -6,7 +6,6 @@ interface ProjectGridProps {
 }
 
 const ProjectGrid = ({ projects }: ProjectGridProps) => {
-  console.log("ProjectGrid 리렌더링");
   return (
     <div className="grid grid-cols-2 gap-x-[clamp(0.5rem,3vw,2rem)] gap-y-[clamp(2rem,5vw,6.87rem)]">
       {projects.map((project) => (
