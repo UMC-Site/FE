@@ -75,6 +75,7 @@ const Navbar = () => {
       </div>
     </header>
   );
+  return <div className="w-full bg-[var(--color-navbar)]">Navbar</div>;
 };
 
 export default Navbar;

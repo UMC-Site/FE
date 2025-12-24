@@ -1,7 +1,8 @@
 @layer base {
   :root {
     --vh: 100%;
-    --font-family: "Pretendard-Regular";
+    --font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
   }
 
   html {
@@ -29,6 +30,7 @@
     background-size: 100%;
     background-repeat: repeat;
     background: var(--gradient-background);
+    
     @apply flex justify-center;
   }
 
@@ -68,6 +70,7 @@
 
   button {
     @apply cursor-pointer p-0;
+    font-family: inherit;
   }
 
   textarea {

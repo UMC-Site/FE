@@ -1,9 +1,9 @@
+import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import RootLayout from "../layout/RootLayout";
-import { Suspense, lazy } from "react";
-
 import Spinner from "../components/Spinner/Spinner";
+import RootLayout from "../layout/RootLayout";
 import HomePage from "../pages/home/Home";
+
 const ProjectsListPage = lazy(
   () => import("../pages/projects/projectsList/ProjectsList")
 );
