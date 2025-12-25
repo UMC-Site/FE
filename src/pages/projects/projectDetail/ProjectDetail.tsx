@@ -1,5 +1,40 @@
+import { useParams, Navigate } from "react-router-dom";
+import { allProjects } from "@/utils/Project";
+import {
+  Info,
+  ProjectLink,
+  Contribution,
+  Feel,
+} from "./components";
+
 const ProjectDetail = () => {
-  return <>ProjectDetail</>;
+  const { id } = useParams<{ id: string }>();
+  const project = allProjects.find((p) => p.id === Number(id));
+
+  if (!project) {
+    return <Navigate to="/project" replace />;
+  }
+
+  return (
+    <div className="flex w-full flex-col pb-[clamp(5rem,10vw,8.75rem)]">
+      <Info
+        imageUrl={project.projectDetailWeb}
+        title={project.title}
+        description={project.detailExplain}
+      />
+
+      <article className="pageContainer mx-auto flex flex-col">
+        {project.project && <ProjectLink url={project.project} />}
+
+        <Contribution
+          people={project.people}
+          hasProjectLink={!!project.project}
+        />
+
+        {project.feel && <Feel feels={project.feel} />}
+      </article>
+    </div>
+  );
 };
 
 export default ProjectDetail;

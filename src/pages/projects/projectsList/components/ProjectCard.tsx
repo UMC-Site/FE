@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Project } from "@/types/project";
 
 interface ProjectCardProps {
@@ -7,13 +8,15 @@ interface ProjectCardProps {
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <article className="w-full overflow-hidden rounded-[clamp(0.2rem,0.5vw,0.4rem)]">
-      <img
-        src={project.projectWeb}
-        alt={project.title}
-        loading="lazy"
-        decoding="async"
-        className="aspect-video w-full cursor-pointer object-cover"
-      />
+      <Link to={`/project/${project.id}`}>
+        <img
+          src={project.projectWeb}
+          alt={project.title}
+          loading="lazy"
+          decoding="async"
+          className="aspect-video w-full cursor-pointer object-cover"
+        />
+      </Link>
       <div className="mt-[clamp(1.6rem,3vw,4rem)] w-full">
         <h3 className="font-semibold text-[clamp(1.6rem,3vw,2.8rem)] text-intro leading-[1.2]">
           {project.title}
