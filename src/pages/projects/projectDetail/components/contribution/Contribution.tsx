@@ -6,7 +6,10 @@ interface ContributionProps {
   hasProjectLink?: boolean;
 }
 
-const Contribution = ({ people, hasProjectLink = false }: ContributionProps) => {
+const Contribution = ({
+  people,
+  hasProjectLink = false,
+}: ContributionProps) => {
   const marginClass = hasProjectLink
     ? "mt-[clamp(3rem,6vw,8rem)]"
     : "mt-[clamp(5rem,10vw,12rem)]";

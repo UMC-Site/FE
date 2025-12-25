@@ -9,7 +9,7 @@ const Feel = ({ feels }: FeelProps) => {
   if (!feels || feels.length === 0) return null;
 
   return (
-    <section className="mt-[clamp(5rem,10vw,8.75rem)] project-section-gap">
+    <section className="project-section-gap mt-[clamp(5rem,10vw,8.75rem)]">
       <h2 className="project-section-title">소감</h2>
       <ul className="flex flex-col gap-[clamp(2rem,5vw,3.5rem)]">
         {feels.map((feel) => (

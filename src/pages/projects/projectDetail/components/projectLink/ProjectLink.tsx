@@ -4,7 +4,7 @@ interface ProjectLinkProps {
 
 const ProjectLink = ({ url }: ProjectLinkProps) => {
   return (
-    <section className="mt-[clamp(5rem,10vw,12rem)] project-section-gap">
+    <section className="project-section-gap mt-[clamp(5rem,10vw,7.5rem)]">
       <h2 className="project-section-title">프로젝트</h2>
       <a
         href={url}

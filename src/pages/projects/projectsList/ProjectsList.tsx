@@ -8,7 +8,7 @@ const ProjectsList = () => {
 
   return (
     <div className="pageContainer">
-      <div className="flex flex-col gap-y-[clamp(2rem,4vw,3.73rem)] pb-[clamp(5rem,10vw,8.75rem)]">
+      <div className="flex flex-col gap-y-[clamp(1.62rem,4vw,3.73rem)] pb-[clamp(5rem,10vw,8.75rem)]">
         <Title text="Project" />
         <GenerationFilter
           selectedFilter={selectedFilter}

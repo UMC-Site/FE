@@ -1,11 +1,6 @@
-import { useParams, Navigate } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { allProjects } from "@/utils/Project";
-import {
-  Info,
-  ProjectLink,
-  Contribution,
-  Feel,
-} from "./components";
+import { Contribution, Feel, Info, ProjectLink } from "./components";
 
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,7 +13,11 @@ const ProjectDetail = () => {
   return (
     <div className="flex w-full flex-col pb-[clamp(5rem,10vw,8.75rem)]">
       <Info
-        imageUrl={project.projectDetailWeb}
+        imageUrl={
+          window.innerWidth <= 430
+            ? project.projectDetailMobile
+            : project.projectDetailWeb
+        }
         title={project.title}
         description={project.detailExplain}
       />
