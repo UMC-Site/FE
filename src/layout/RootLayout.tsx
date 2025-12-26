@@ -5,7 +5,12 @@ import Navbar from "@/components/Navbar/Navbar";
 const RootLayout = () => {
   return (
     <div className="flex min-h-screen flex-col items-center">
-      <ScrollRestoration />
+      <ScrollRestoration getKey={(location) => {
+          if (location.pathname === "/project") {
+            return "project";
+          }
+          return location.pathname;
+        }}/>
       <Navbar />
       <main className="flex w-full flex-1 justify-center">
         <Outlet />
