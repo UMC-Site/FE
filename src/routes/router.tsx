@@ -12,6 +12,7 @@ const ProjectDetailPage = lazy(
 );
 const QnaPage = lazy(() => import("../pages/qna/Qna"));
 const RecruitPage = lazy(() => import("../pages/recruit/Recruit"));
+const MembersPage = lazy(() => import("../pages/members/Members"));
 const NotFoundPage = lazy(() => import("../pages/notFound/NotFound"));
 
 const router = createBrowserRouter([
@@ -52,6 +53,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Spinner />}>
             <RecruitPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "members",
+        element: (
+          <Suspense fallback={<Spinner />}>
+            <MembersPage />
           </Suspense>
         ),
       },
