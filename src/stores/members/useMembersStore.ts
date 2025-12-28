@@ -1,5 +1,8 @@
 import { create } from "zustand";
+import { MEMBERS_TYPES } from "@/types/members/members";
 import type { MembersType } from "@/types/members/members";
+
+const DEFAULT_MEMBER_TYPE = MEMBERS_TYPES[MEMBERS_TYPES.length - 1];
 
 interface MembersState {
   selectedType: MembersType;
@@ -7,6 +10,6 @@ interface MembersState {
 }
 
 export const useMembersStore = create<MembersState>((set) => ({
-  selectedType: "10기",
+  selectedType: DEFAULT_MEMBER_TYPE,
   setSelectedType: (type) => set({ selectedType: type }),
 }));
