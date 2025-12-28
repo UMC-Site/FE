@@ -1,28 +1,26 @@
+import { useMemo } from "react";
 import Title from "@/components/Title/Title";
 import ListFilter from "./components/Filter/ListFilter";
-import { useState } from "react";
-import type { MembersType } from "@/types/members/members";
-import { MEMBERS_TYPES } from "@/types/members/members";
+import ListPart from "./components/Members/ListPart";
 import { MembersData } from "@/mocks/members/membersData";
-import ListMembers from "./components/Members/ListMembers";
+import { useMembersStore } from "@/stores/members/useMembersStore";
 
 const Members = () => {
-  const [selectedType, setSelectedType] = useState<MembersType>("9기");
+  const selectedType = useMembersStore((state) => state.selectedType);
 
-  const selectedMembers =
-    MembersData.find((item) => item.type === selectedType)?.members ?? [];
+  const selectedMembers = useMemo(() => {
+    return (
+      MembersData.find((item) => item.type === selectedType)?.members ?? []
+    );
+  }, [selectedType]);
 
   return (
     <div className="pageContainer">
       <Title text="Members" />
 
-      <ListFilter
-        types={MEMBERS_TYPES}
-        selectedType={selectedType}
-        onSelectType={setSelectedType}
-      />
+      <ListFilter />
 
-      <ListMembers membersList={selectedMembers} />
+      <ListPart partList={selectedMembers} />
     </div>
   );
 };

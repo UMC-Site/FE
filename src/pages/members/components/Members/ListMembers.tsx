@@ -1,25 +1,20 @@
-import type { MembersItem, PartType } from "@/types/members/members";
+import type { MembersItem } from "@/types/members/members";
 import ItemMembers from "./ItemMembers";
 
 interface ListMembersProps {
   membersList: MembersItem[];
 }
 
-const PART_ORDER: PartType[] = ["PM", "DE", "FE", "BE"];
-
 const ListMembers = ({ membersList }: ListMembersProps) => {
   return (
-    <div className="flex flex-col gap-[clamp(2.4rem,5vw,4.5rem)] mb-[clamp(6rem,8vw,11.3rem)]">
-      {PART_ORDER.map((part) => {
-        const filteredMembers = membersList
-          .filter((member) => member.part.includes(part))
-          .sort((a, b) => a.nickname.localeCompare(b.nickname, "ko"));
-
-        if (filteredMembers.length === 0) return null;
-
-        return <ItemMembers key={part} part={part} members={filteredMembers} />;
-      })}
-    </div>
+    <ul className="grid grid-cols-3 gap-[clamp(0.4rem,1.5vw,1rem)]">
+      {membersList.map((member) => (
+        <ItemMembers
+          key={`${member.id}-${member.part.join("-")}`}
+          member={member}
+        />
+      ))}
+    </ul>
   );
 };
 
