@@ -7,6 +7,6 @@ interface MembersState {
 }
 
 export const useMembersStore = create<MembersState>((set) => ({
-  selectedType: "9기",
+  selectedType: "10기",
   setSelectedType: (type) => set({ selectedType: type }),
 }));

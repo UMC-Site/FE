@@ -1,4 +1,4 @@
-export const MEMBERS_TYPES = ["6기", "7기", "8기", "9기"] as const;
+export const MEMBERS_TYPES = ["7기", "8기", "9기", "10기"] as const;
 export type MembersType = (typeof MEMBERS_TYPES)[number];
 
 export const PART_TYPES = ["PM", "FE", "BE", "DE"] as const;
