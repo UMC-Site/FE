@@ -13,7 +13,7 @@ const ListPart = ({ partList }: ListPartProps) => {
       {PART_ORDER.map((part) => {
         const membersByPart = partList
           .filter((member) => member.part.includes(part))
-          .sort((a, b) => a.nickname.localeCompare(b.nickname, "ko"));
+          .sort((a, b) => a.name.localeCompare(b.name, "ko"));
 
         if (membersByPart.length === 0) return null;
 

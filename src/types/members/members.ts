@@ -6,7 +6,6 @@ export type PartType = (typeof PART_TYPES)[number];
 
 export interface MembersItem {
   id: number;
-  nickname: string;
   name: string;
   part: PartType[];
   link?: string;

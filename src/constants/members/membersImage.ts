@@ -1,9 +1,9 @@
 export const MEMBERS_IMAGE = {
-  하키: "haki",
-  이즈: "is",
-  세인트: "saint",
-  지니: "genie",
-  바나: "bana",
+  "하키/김경민": "haki-kyungmin",
+  "이즈/양인서": "is-inseo",
+  "세인트/김준용": "saint-junyong",
+  "지니/유진": "genie-jin",
+  "바나/유상완": "bana-sangwan",
 } as const;
 
-export type MemberNickname = keyof typeof MEMBERS_IMAGE;
+export type MembeName = keyof typeof MEMBERS_IMAGE;

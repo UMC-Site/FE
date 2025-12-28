@@ -7,39 +7,34 @@ export const members10th: MembersCategory = {
   members: [
     createMember({
       id: 1,
-      nickname: "이즈",
-      name: "양인서",
+      name: "이즈/양인서",
       part: ["PM", "DE", "FE"],
       link: "https://github.com/sheepyis",
     }),
 
     createMember({
       id: 2,
-      nickname: "에리얼",
-      name: "임채현",
+      name: "에리얼/임채현",
       part: ["PM", "DE"],
     }),
 
     createMember({
       id: 3,
-      nickname: "핸",
-      name: "윤혜성",
+      name: "핸/윤혜성",
       part: ["FE"],
       link: "https://github.com/hyesngy",
     }),
 
     createMember({
       id: 4,
-      nickname: "바나",
-      name: "유상완",
+      name: "바나/유상완",
       part: ["FE"],
       link: "https://github.com/wantkdd",
     }),
 
     createMember({
       id: 5,
-      nickname: "앨빈",
-      name: "윤상혁",
+      name: "앨빈/윤상혁",
       part: ["FE"],
       link: "https://github.com/hyeok02",
     }),

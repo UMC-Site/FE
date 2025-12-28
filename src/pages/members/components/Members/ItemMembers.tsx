@@ -21,14 +21,14 @@ const ItemMembers = ({ member }: ItemMembersProps) => {
         {member.image && (
           <img
             src={member.image}
-            alt={member.nickname}
+            alt={member.name}
             className="w-full h-full object-cover"
           />
         )}
       </div>
 
       <p className="w-full text-left font-semibold text-[clamp(1.6rem,2vw,2.8rem)]">
-        {member.nickname}/{member.name}
+        {member.name}
       </p>
     </li>
   );

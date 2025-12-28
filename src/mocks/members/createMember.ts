@@ -5,5 +5,5 @@ export const createMember = (
   member: Omit<MembersItem, "image">
 ): MembersItem => ({
   ...member,
-  image: loadImages(member.nickname),
+  image: loadImages(member.name),
 });
