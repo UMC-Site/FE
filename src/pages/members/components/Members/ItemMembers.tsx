@@ -1,5 +1,6 @@
 import type { MembersItem } from "@/types/members/members";
 import useNavigation from "@/hooks/useNavigation";
+import Default from "@/assets/images/members/default.png";
 
 interface ItemMembersProps {
   member: MembersItem;
@@ -17,14 +18,12 @@ const ItemMembers = ({ member }: ItemMembersProps) => {
   "
       onClick={() => member.link && navigateTo(member.link)}
     >
-      <div className="rounded-[0.4rem] w-full aspect-square bg-gray-200 overflow-hidden mb-[clamp(0.4rem,1.5vw,1rem)]">
-        {member.image && (
-          <img
-            src={member.image}
-            alt={member.name}
-            className="w-full h-full object-cover"
-          />
-        )}
+      <div className="rounded-[0.4rem] w-full aspect-square overflow-hidden mb-[clamp(0.4rem,1.5vw,1rem)]">
+        <img
+          src={member.image || Default}
+          alt={member.name}
+          className="w-full h-full object-cover"
+        />
       </div>
 
       <p className="w-full text-left font-semibold text-[clamp(1.6rem,2vw,2.8rem)]">
