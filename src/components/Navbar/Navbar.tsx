@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.png";
 import { NAV_ITEMS } from "../../constants/navigation";
+import useNavigation from "../../hooks/useNavigation";
 import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const navigate = useNavigate();
+  const { navigateTo } = useNavigation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -23,7 +24,7 @@ const Navbar = () => {
   }, [menuOpen]);
 
   const handleHomeClick = () => {
-    navigate("/");
+    navigateTo("/");
     window.scrollTo(0, 0);
     setMenuOpen(false);
   };
@@ -57,7 +58,7 @@ const Navbar = () => {
               <li key={item.path}>
                 <Link
                   to={item.path}
-                  className="font-medium text-white text-xl transition-colors duration-200 hover:text-primary-400"
+                  className="cursor-pointer font-medium text-white text-xl transition-colors duration-200 hover:text-primary-400"
                 >
                   {item.label}
                 </Link>

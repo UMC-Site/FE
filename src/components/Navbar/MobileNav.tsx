@@ -33,7 +33,7 @@ const MobileNav = ({ isOpen, onToggle, onClose }: MobileNavProps) => {
                 key={item.path}
                 to={item.path}
                 onClick={onClose}
-                className="py-2 font-medium text-3xl text-menu transition-colors duration-200 hover:text-white"
+                className="cursor-pointer py-2 font-medium text-3xl text-menu transition-colors duration-200 hover:text-white"
               >
                 {item.label}
               </Link>
