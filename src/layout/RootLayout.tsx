@@ -12,7 +12,7 @@ const RootLayout = () => {
           return location.pathname;
         }}/>
       <Navbar />
-      <main className="flex w-full flex-1 justify-center">
+      <main className="flex w-full flex-1 justify-center pt-32 max-sm:pt-28">
         <Outlet />
       </main>
       <Footer />
