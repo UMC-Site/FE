@@ -14,7 +14,7 @@ const GenerationFilter = ({
   onFilterChange,
 }: GenerationFilterProps) => {
   return (
-    <div className="flex gap-[clamp(0.5rem,2vw,2rem)]">
+    <div className="flex gap-[clamp(0.75rem,1.5vw,2rem)]">
       {FILTER_OPTIONS.map((filter) => (
         <GenerationButton
           key={filter}
