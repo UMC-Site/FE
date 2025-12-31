@@ -1,3 +1,4 @@
+import texture1Img from "@/assets/images/home/texture1.png";
 import { ACTIVITIES } from "../../data";
 import useScrollAnimation from "../../hooks/useScrollAnimation";
 import ActivityItem from "./ActivityItem";
@@ -10,7 +11,14 @@ const Activities = () => {
       ref={elementRef}
       className="relative flex w-full flex-col items-center overflow-hidden pb-28"
     >
-      <div className="flex h-34 flex-col items-center justify-between max-sm:h-[4.917rem]">
+      <img
+        src={texture1Img}
+        alt=""
+        className="-mt-8 max-sm:-mt-28 absolute top-0 right-0 w-md max-sm:w-40"
+        aria-hidden="true"
+      />
+
+      <div className="mt-60 flex h-34 flex-col items-center justify-between max-sm:mt-48 max-sm:h-[4.917rem]">
         <p className="font-normal text-[2.8rem] text-white leading-[3.4rem] tracking-[0.06rem] max-sm:text-[1.3rem] max-sm:leading-[1.7rem]">
           HSU UMC
         </p>

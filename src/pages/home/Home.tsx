@@ -2,7 +2,7 @@ import { Activities, Apply, Banner, Goal, Intro, Stage } from "./components";
 
 const Home = () => {
   return (
-    <main className="pagecontainer">
+    <main className="pageContainer">
       <Banner />
       <Intro />
       <Goal />

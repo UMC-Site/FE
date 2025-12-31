@@ -21,7 +21,7 @@ const LightEffect = ({ position }: LightEffectProps) => (
 
 const Banner = () => {
   return (
-    <section className="relative flex aspect-32/17 min-h-200 w-full items-center justify-center overflow-hidden">
+    <section className="relative flex aspect-32/17 min-h-200 w-full items-center justify-center overflow-hidden max-sm:min-h-140">
       {/* Floating Shapes */}
       <div className="pointer-events-none absolute inset-0 z-10">
         {FLOATING_SHAPES.map(({ id, ...shape }) => (
@@ -37,7 +37,7 @@ const Banner = () => {
         <img
           src={bannerLogoImg}
           alt="HSU UMC"
-          className="mt-3 h-auto w-[clamp(18rem,50vw,50rem)] animate-sparkle"
+          className="mt-3 h-auto w-[clamp(18rem,50vw,57rem)] animate-sparkle"
         />
 
         <p className="mt-3 animate-sparkle-text text-center font-semibold text-[clamp(1rem,2.5vw,2.6rem)] text-white leading-tight opacity-95">

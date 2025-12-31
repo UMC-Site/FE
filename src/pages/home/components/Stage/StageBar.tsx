@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { STAGE_DATA } from "../../data";
 import { getStaggerDelay } from "../../utils";
 import StageItem from "./StageItem";
+import StageDot from "../../../../assets/images/icons/stageDot.svg";
 
 interface StageBarProps {
   isVisible: boolean;
@@ -11,7 +12,7 @@ const StageBar = ({ isVisible }: StageBarProps) => (
   <div className="flex flex-col items-center">
     <div
       className={clsx(
-        "relative mt-[5.1rem] flex w-448 items-center justify-center max-sm:mt-[3.457rem] max-sm:w-160",
+        "relative mt-16 flex w-360 items-center justify-center max-sm:mt-[3.457rem] max-sm:w-160",
         isVisible
           ? "animate-reveal-from-left"
           : "opacity-0 [clip-path:inset(0_100%_0_0)]"
@@ -25,13 +26,13 @@ const StageBar = ({ isVisible }: StageBarProps) => (
             key={`dot-${stage.date}-${stage.title}`}
             className="relative z-2 flex h-[3.9rem] w-[3.6rem] items-center justify-center max-sm:h-[1.95rem] max-sm:w-[1.8rem]"
           >
-            <div className="h-[1.6rem] w-[1.6rem] rounded-full bg-linear-to-br from-primary-500 to-secondary max-sm:h-[0.8rem] max-sm:w-[0.8rem]" />
+            <img src={StageDot} alt="stage dot" className="h-full w-full" />
           </div>
         ))}
       </div>
     </div>
 
-    <div className="mt-[2.1rem] flex w-448 items-end justify-between max-sm:mt-[1.642rem] max-sm:w-160 max-sm:gap-[0.3rem]">
+    <div className="mt-[1.8rem] flex w-360 items-end justify-between max-sm:mt-[1.642rem] max-sm:w-160 max-sm:gap-[0.3rem]">
       {STAGE_DATA.map((stage, index) => (
         <StageItem
           key={`${stage.date}-${stage.title}`}

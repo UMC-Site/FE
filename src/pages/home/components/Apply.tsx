@@ -9,13 +9,11 @@ const Apply = () => {
   };
 
   return (
-    <section className="relative isolate ml-[calc(-50vw+50%)] flex h-200 w-screen flex-col items-center justify-center overflow-hidden text-center max-sm:h-[30rem] max-sm:px-[5rem] max-md:h-[35rem] max-lg:h-[40rem]">
+    <section className="relative isolate ml-[calc(-50vw+50%)] flex h-300 w-screen flex-col items-center justify-center overflow-hidden text-center max-sm:h-120 max-sm:px-20 max-md:h-140 max-lg:h-160">
       <img
         src={applyBgImg}
-        alt=""
-        className="absolute inset-0 h-full w-full object-cover"
-        style={{ zIndex: -2 }}
-        aria-hidden="true"
+        alt="Apply Background"
+        className="-z-2 -translate-x-1/2 absolute top-0 left-1/2 h-[105%] w-full object-cover object-top opacity-50 blur-xs max-sm:w-[125%]"
       />
 
       <h2 className="font-semibold text-[3.6rem] text-white leading-10 tracking-[-0.07rem] max-sm:text-[2.2rem] max-sm:leading-6">
