@@ -13,8 +13,8 @@ const Qna = () => {
     QnaData.find((item) => item.type === selectedType)?.qna ?? [];
 
   return (
-    <div className="pageContainer">
-      <Title text="FAQ" />
+    <div className="pageContainer flex flex-col gap-y-[clamp(1.62rem,4vw,3.73rem)] pb-[clamp(25.8rem,6vw,27.9rem)]">
+      <Title text="QnA" />
 
       <ListFilter
         types={QNA_TYPES}
