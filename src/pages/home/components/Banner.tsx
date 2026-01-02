@@ -21,7 +21,7 @@ const LightEffect = ({ position }: LightEffectProps) => (
 
 const Banner = () => {
   return (
-    <section className="relative flex aspect-32/17 min-h-200 w-full items-center justify-center overflow-hidden max-sm:min-h-140">
+    <section className="-translate-x-1/2 relative left-1/2 flex aspect-32/17 min-h-200 w-screen items-center justify-center overflow-hidden max-sm:min-h-140">
       {/* Floating Shapes */}
       <div className="pointer-events-none absolute inset-0 z-10">
         {FLOATING_SHAPES.map(({ id, ...shape }) => (
