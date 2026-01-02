@@ -1,6 +1,6 @@
 import { create } from "zustand";
-import { MEMBERS_TYPES } from "@/types/members/members";
 import type { MembersType } from "@/types/members/members";
+import { MEMBERS_TYPES } from "@/types/members/members";
 
 const DEFAULT_MEMBER_TYPE = MEMBERS_TYPES[MEMBERS_TYPES.length - 1];
 

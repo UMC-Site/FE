@@ -1,6 +1,6 @@
 import { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
 import type { NavigateOptions } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 type NavigateToOptions = NavigateOptions & {
   newTab?: boolean;

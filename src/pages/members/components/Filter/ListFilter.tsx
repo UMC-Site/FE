@@ -1,5 +1,5 @@
-import { MEMBERS_TYPES } from "@/types/members/members";
 import { useMembersStore } from "@/stores/members/useMembersStore";
+import { MEMBERS_TYPES } from "@/types/members/members";
 import { getGenerations } from "@/utils/members/getGenerations";
 import ItemFilter from "./ItemFilter";
 

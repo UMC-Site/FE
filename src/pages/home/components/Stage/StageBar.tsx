@@ -1,8 +1,8 @@
 import clsx from "clsx";
+import StageDot from "@/assets/images/icons/stageDot.svg";
 import { STAGE_DATA } from "../../data";
 import { getStaggerDelay } from "../../utils";
 import StageItem from "./StageItem";
-import StageDot from "@/assets/images/icons/stageDot.svg";
 
 interface StageBarProps {
   isVisible: boolean;
