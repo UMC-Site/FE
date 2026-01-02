@@ -1,6 +1,6 @@
-import type { MembersItem } from "@/types/members/members";
-import useNavigation from "@/hooks/useNavigation";
 import Default from "@/assets/images/members/default.png";
+import useNavigation from "@/hooks/useNavigation";
+import type { MembersItem } from "@/types/members/members";
 
 interface ItemMembersProps {
   member: MembersItem;
@@ -11,18 +11,14 @@ const ItemMembers = ({ member }: ItemMembersProps) => {
 
   return (
     <li
-      className="
-    flex flex-col items-center w-full cursor-pointer
-    transition-all duration-200 ease-out
-    hover:scale-[1.03] hover:shadow-lg
-  "
+      className="flex w-full cursor-pointer flex-col items-center transition-all duration-200 ease-out hover:scale-[1.03] hover:shadow-lg"
       onClick={() => member.link && navigateTo(member.link)}
     >
-      <div className="rounded-[0.4rem] w-full aspect-square overflow-hidden mb-[clamp(0.4rem,1.5vw,1rem)]">
+      <div className="mb-[clamp(0.4rem,1.5vw,1rem)] aspect-square w-full overflow-hidden rounded-[0.4rem]">
         <img
           src={member.image || Default}
           alt={member.name}
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover"
         />
       </div>
 

@@ -9,7 +9,7 @@ const PART_ORDER: PartType[] = ["PM", "DE", "FE", "BE"];
 
 const ListPart = ({ partList }: ListPartProps) => {
   return (
-    <div className="flex flex-col gap-[clamp(2.4rem,5vw,4.5rem)] mb-[clamp(6rem,8vw,11.3rem)]">
+    <div className="mb-[clamp(6rem,8vw,11.3rem)] flex flex-col gap-[clamp(2.4rem,5vw,4.5rem)]">
       {PART_ORDER.map((part) => {
         const membersByPart = partList
           .filter((member) => member.part.includes(part))
