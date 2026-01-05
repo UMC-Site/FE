@@ -9,7 +9,7 @@ interface ListFilterProps {
 
 const ListFilter = ({ types, selectedType, onSelectType }: ListFilterProps) => {
   return (
-    <div className="mt-[clamp(2.6rem,5vw,7rem)] mb-[clamp(2.3rem,5vw,8rem)] flex items-center gap-[clamp(0.8rem,2vw,2rem)]">
+    <div className="flex items-center gap-[clamp(0.8rem,1.5vw,2rem)]">
       {types.map((type) => (
         <ItemFilter
           key={type}
