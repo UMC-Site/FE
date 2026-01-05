@@ -1,4 +1,4 @@
-import applyBgImg from "@/assets/images/home/applybg.png";
+import applyBgImg from "@/assets/images/home/applybg.webp";
 import useNavigation from "@/hooks/useNavigation";
 
 const Apply = () => {
@@ -13,6 +13,7 @@ const Apply = () => {
       <img
         src={applyBgImg}
         alt="Apply Background"
+        loading="lazy"
         className="-z-2 -translate-x-1/2 absolute top-0 left-1/2 h-[105%] w-full object-cover object-top opacity-50 blur-xs max-sm:w-[125%]"
       />
 
