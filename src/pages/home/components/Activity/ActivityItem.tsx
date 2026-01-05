@@ -16,7 +16,7 @@ const ActivityItem = ({ activity, isVisible, index }: ActivityItemProps) => (
     )}
     style={{ animationDelay: getStaggerDelay(index) }}
   >
-    <div className="h-120 w-200 shrink-0 overflow-hidden rounded-[0.6rem] max-sm:h-60 max-sm:w-100 max-sm:rounded-[0.4rem]">
+    <div className="h-120 w-200 shrink-0 overflow-hidden rounded-[0.6rem] max-sm:h-40 max-sm:w-64 max-sm:rounded-[0.4rem]">
       <img
         src={activity.image}
         alt={activity.title}
