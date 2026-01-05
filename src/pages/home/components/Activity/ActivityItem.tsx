@@ -16,11 +16,14 @@ const ActivityItem = ({ activity, isVisible, index }: ActivityItemProps) => (
     )}
     style={{ animationDelay: getStaggerDelay(index) }}
   >
-    <div className="h-120 w-200 shrink-0 overflow-hidden rounded-[0.6rem] max-sm:h-40 max-sm:w-[16rem] max-sm:rounded-[0.4rem]">
+    <div className="h-120 w-200 shrink-0 overflow-hidden rounded-[0.6rem] max-sm:h-60 max-sm:w-100 max-sm:rounded-[0.4rem]">
       <img
         src={activity.image}
         alt={activity.title}
-        className="h-full w-full object-cover"
+        className={clsx(
+          "h-full w-full object-cover",
+          activity.imageRotate && "rotate-180"
+        )}
       />
     </div>
 
