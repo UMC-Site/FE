@@ -9,14 +9,12 @@ export const members7th: MembersCategory = {
       id: 1,
       name: "하키/김경민",
       part: ["PM"],
-      link: "https://marshy-substance-339.notion.site/15fe05900d6080fa9973f87cf40b30a9?pvs=143",
     }),
 
     createMember({
       id: 2,
       name: "이즈/양인서",
       part: ["PM", "FE"],
-      link: "https://github.com/sheepyis",
     }),
 
     createMember({
@@ -35,21 +33,18 @@ export const members7th: MembersCategory = {
       id: 5,
       name: "체리/김다현",
       part: ["FE"],
-      link: "https://github.com/daahyunk",
     }),
 
     createMember({
       id: 6,
       name: "핸/윤혜성",
       part: ["FE"],
-      link: "https://github.com/hyesngy",
     }),
 
     createMember({
       id: 7,
       name: "사이다/강다현",
       part: ["BE"],
-      link: "https://github.com/hyeonda02",
     }),
 
     createMember({

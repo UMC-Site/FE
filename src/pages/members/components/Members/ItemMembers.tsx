@@ -22,7 +22,7 @@ const ItemMembers = ({ member }: ItemMembersProps) => {
         />
       </div>
 
-      <p className="w-full text-left font-semibold text-[clamp(1.6rem,2vw,2.8rem)]">
+      <p className="w-full text-left font-semibold text-[clamp(1.2rem,2vw,2.4rem)]">
         {member.name}
       </p>
     </li>

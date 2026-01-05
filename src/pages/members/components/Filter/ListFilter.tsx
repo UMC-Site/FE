@@ -7,7 +7,7 @@ const ListFilter = () => {
   const { selectedType, setSelectedType } = useMembersStore();
 
   return (
-    <div className="mt-[clamp(2.6rem,5vw,7rem)] mb-12 flex items-center gap-[clamp(0.8rem,2vw,2rem)]">
+    <div className="flex items-center gap-[clamp(0.8rem,1.5vw,2rem)]">
       {[...MEMBERS_TYPES]
         .sort((a, b) => getGenerations(b) - getGenerations(a))
 
