@@ -9,7 +9,6 @@ export const members8th: MembersCategory = {
       id: 1,
       name: "이즈/양인서",
       part: ["PM", "FE"],
-      link: "https://github.com/sheepyis",
     }),
 
     createMember({
@@ -22,14 +21,12 @@ export const members8th: MembersCategory = {
       id: 3,
       name: "핸/윤혜성",
       part: ["FE"],
-      link: "https://github.com/hyesngy",
     }),
 
     createMember({
       id: 4,
       name: "세인트/김준용",
       part: ["BE"],
-      link: "https://github.com/ggamnunq",
     }),
   ],
 };

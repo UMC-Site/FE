@@ -9,7 +9,7 @@ interface ItemPartProps {
 const ItemPart = ({ part, members }: ItemPartProps) => {
   return (
     <section>
-      <h3 className="mb-[0.4rem] font-semibold text-[clamp(1.8rem,3vw,2.8rem)] text-banner-bg-4">
+      <h3 className="mb-[0.4rem] font-semibold text-[clamp(1.8rem,2.3vw,2.8rem)] text-banner-bg-4">
         {part}
       </h3>
 
