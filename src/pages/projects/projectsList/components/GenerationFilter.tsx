@@ -7,7 +7,7 @@ interface GenerationFilterProps {
   onFilterChange: (filter: FilterType) => void;
 }
 
-const FILTER_OPTIONS: FilterType[] = ["ALL", ...GENERATION_TYPES];
+const FILTER_OPTIONS: FilterType[] = [...GENERATION_TYPES];
 
 const GenerationFilter = ({
   selectedFilter,

@@ -3,7 +3,7 @@ import type { FilterType, Project } from "@/types/project";
 import { getFilteredProjects } from "@/utils/Project";
 
 export const useProjectFilter = () => {
-  const [selectedFilter, setSelectedFilter] = useState<FilterType>("ALL");
+  const [selectedFilter, setSelectedFilter] = useState<FilterType>("9기");
 
   const filteredProjects: Project[] = useMemo(() => {
     return getFilteredProjects(selectedFilter);
