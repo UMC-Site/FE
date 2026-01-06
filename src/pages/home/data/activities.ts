@@ -11,7 +11,7 @@ export interface Activity {
 const images = loadImages({
   study: "images/home/study.png",
   pmDay: "images/home/pmDay.png",
-  springReview: "images/home/sprintReviewDay.png",
+  sprintReview: "images/home/sprintReviewDay.png",
   umcHackathon: "images/home/umcHackathon.png",
   umcon: "images/home/conference.png",
   demoDay: "images/home/demoDay.png",
@@ -35,10 +35,10 @@ export const ACTIVITIES: Activity[] = [
   },
   {
     id: 3,
-    title: "Spring Review Day",
+    title: "Sprint Review Day",
     description:
-      "한 학기 동안의 스터디 성과를 공유하고, 서로의 성장을 축하하는 시간입니다.",
-    image: images.springReview,
+      "데모데이 프로젝트를 준비하며, 팀에서 발생한 이슈와 기술적 내용을 공유하는 시간입니다.",
+    image: images.sprintReview,
   },
   {
     id: 4,
