@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { NAV_ITEMS } from "../../constants/navigation";
-import MenuIcon from "../../assets/images/icons/menu.svg?react";
 import CloseIcon from "../../assets/images/icons/close.svg?react";
+import MenuIcon from "../../assets/images/icons/menu.svg?react";
+import { NAV_ITEMS } from "../../constants/navigation";
 
 interface MobileNavProps {
   isOpen: boolean;

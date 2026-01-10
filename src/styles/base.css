@@ -30,8 +30,8 @@
     background-size: 100%;
     background-repeat: repeat;
     background: var(--gradient-background);
-    
-    @apply flex justify-center;
+
+    @apply flex justify-center overflow-x-hidden;
   }
 
   *,
