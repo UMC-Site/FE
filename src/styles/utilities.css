@@ -15,13 +15,16 @@
   .pageContainer {
     @apply w-[68%];
   }
+  .pageContainerRecruit {
+    @apply w-[100%];
+  }
 
   @media screen and (max-width: 430px) {
     .pageContainer {
       @apply w-full px-[1.8rem];
     }
   }
-  
+
   .project-section-title {
     @apply text-[clamp(1.6rem,3vw,2.25rem)] font-bold leading-tight text-intro;
   }
