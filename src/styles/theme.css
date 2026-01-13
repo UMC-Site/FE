@@ -100,4 +100,16 @@
     var(--color-background-2) 65%,
     var(--color-background-3) 84%
   );
+  --gradient-banner: linear-gradient(
+    90deg,
+    var(--color-banner-bg-4) 0%,
+    var(--color-banner-bg-3) 33%,
+    var(--color-banner-bg-2) 66%,
+    var(--color-banner-bg-1) 100%
+  );
+  --gradient-box: linear-gradient(
+    90deg,
+    var(--color-banner-bg-4) 0%,
+    var(--color-recruit-11) 100%
+  );
 }

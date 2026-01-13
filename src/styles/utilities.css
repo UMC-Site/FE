@@ -19,14 +19,29 @@
   .pageContainer {
     @apply w-[68%];
   }
-  .pageContainerRecruit {
-    @apply w-[100%];
-  }
 
   @media screen and (max-width: 430px) {
     .pageContainer {
       @apply w-full px-[1.8rem];
     }
+  }
+
+  .border-gradient-box {
+    position: relative;
+    border-radius: clamp(0.4rem, 0.5vw, 0.68rem);
+  }
+  .border-gradient-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 0.17rem;
+    border-radius: inherit;
+    background: var(--gradient-box);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
   }
 
   /* Animations */
