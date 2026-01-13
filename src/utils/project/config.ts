@@ -1,4 +1,4 @@
-export const GENERATIONS = ["6", "7", "8"] as const;
+export const GENERATIONS = ["9", "8", "7", "6"] as const;
 
 export type GenerationNumber = (typeof GENERATIONS)[number];
 export type GenerationType = `${GenerationNumber}기`;

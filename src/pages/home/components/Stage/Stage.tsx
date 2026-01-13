@@ -9,12 +9,12 @@ const Stage = () => {
   return (
     <section
       ref={elementRef}
-      className="relative flex w-full flex-col items-center pb-16"
+      className="relative mt-24 flex w-full flex-col items-center pb-16 max-sm:mt-16"
     >
       <img
         src={texture2Img}
         alt=""
-        className="-mt-8 max-sm:-mt-12 absolute top-0 left-0 w-md max-sm:w-40"
+        className="absolute top-0 left-0 w-md max-sm:w-40 max-md:w-60 max-lg:w-80"
         aria-hidden="true"
       />
 
@@ -32,11 +32,9 @@ const Stage = () => {
 
       <StageBar isVisible={isVisible} />
 
-      <p className="mt-26 text-center font-normal text-[2rem] text-gray-500 leading-12 max-sm:mt-[3.915rem] max-sm:text-[1rem] max-sm:leading-[1.8rem]">
-        한성대학교 UMC는 5기를 시작으로, 기획, 디자인, 서버, 안드로이드, iOS, 웹
-        등
-        <br />
-        여러 전공의 학생들이 참여하며 창의적인 아이디어를 발전시키는 활동을
+      <p className="mt-26 max-w-280 px-8 text-center font-normal text-[2rem] text-gray-500 leading-12 max-sm:mt-[3.915rem] max-sm:text-[1rem] max-sm:leading-[1.8rem]">
+        한성대학교 UMC는 5기를 시작으로, 기획, 디자인, 안드로이드, iOS, 웹, 서버
+        등 여러 전공의 학생들이 참여하며 창의적인 아이디어를 발전시키는 활동을
         했습니다.
       </p>
     </section>

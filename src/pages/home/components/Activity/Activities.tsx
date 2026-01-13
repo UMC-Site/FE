@@ -14,7 +14,7 @@ const Activities = () => {
       <img
         src={texture1Img}
         alt=""
-        className="-mt-8 max-sm:-mt-28 absolute top-0 right-0 w-md max-sm:w-40"
+        className="absolute top-0 right-0 w-md max-sm:w-40 max-md:w-60 max-lg:w-80"
         aria-hidden="true"
       />
 
@@ -27,7 +27,7 @@ const Activities = () => {
         </h3>
       </div>
 
-      <div className="mt-[7.2rem] flex w-[92.9rem] flex-col gap-[4.8rem] max-sm:mt-[4.164rem] max-sm:w-[36.663rem] max-sm:gap-[3.6rem]">
+      <div className="mt-[7.2rem] flex w-full max-w-[92.9rem] flex-col gap-[4.8rem] px-8 max-sm:mt-[4.164rem] max-sm:gap-[3.6rem]">
         {ACTIVITIES.map((activity, index) => (
           <ActivityItem
             key={activity.id}

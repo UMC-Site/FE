@@ -1,5 +1,5 @@
 import type { FilterType } from "@/types/project";
-import { GENERATION_TYPES } from "@/utils/Project";
+import { GENERATION_TYPES } from "@/utils/project";
 import GenerationButton from "./GenerationButton";
 
 interface GenerationFilterProps {
@@ -7,7 +7,7 @@ interface GenerationFilterProps {
   onFilterChange: (filter: FilterType) => void;
 }
 
-const FILTER_OPTIONS: FilterType[] = ["ALL", ...GENERATION_TYPES];
+const FILTER_OPTIONS: FilterType[] = [...GENERATION_TYPES];
 
 const GenerationFilter = ({
   selectedFilter,
