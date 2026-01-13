@@ -1,5 +1,5 @@
 import { Navigate, useParams } from "react-router-dom";
-import { allProjects } from "@/utils/Project";
+import { allProjects } from "@/utils/project";
 import { Contribution, Feel, Info, ProjectLink } from "./components";
 
 const ProjectDetail = () => {
