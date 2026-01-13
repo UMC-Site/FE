@@ -14,7 +14,7 @@ import SNS from "./components/SNS/SNS";
 import useNavigation from "@/hooks/useNavigation";
 
 const Recruit = () => {
-  const [recruitData, setRecruitData] = useState<RecruitDataType>(RecruitData);
+  const [recruitData] = useState<RecruitDataType>(RecruitData);
   const { navigateTo } = useNavigation();
 
   const handleButtonClick = () => {
