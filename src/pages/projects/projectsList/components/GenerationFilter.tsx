@@ -1,5 +1,5 @@
 import type { FilterType } from "@/types/project";
-import { GENERATION_TYPES } from "@/utils/Project";
+import { GENERATION_TYPES } from "@/utils/project";
 import GenerationButton from "./GenerationButton";
 
 interface GenerationFilterProps {

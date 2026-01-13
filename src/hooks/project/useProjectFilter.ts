@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import type { FilterType, Project } from "@/types/project";
-import { getFilteredProjects, GENERATION_TYPES } from "@/utils/Project";
+import { getFilteredProjects, GENERATION_TYPES } from "@/utils/project";
 
 export const useProjectFilter = () => {
   const [selectedFilter, setSelectedFilter] = useState<FilterType>(GENERATION_TYPES[0]);

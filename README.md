@@ -95,7 +95,7 @@ project_9/
 
 ### 2. 데이터 파일 생성
 
-`src/utils/Project/generations/9/data.ts` 파일 생성 (8기 형식 참고)
+`src/utils/project/generations/9/data.ts` 파일 생성 (8기 형식 참고)
 
 ```typescript
 import type { Project } from "@/types/project";
@@ -123,7 +123,7 @@ export const data: Project[] = [
 
 ### 3. config 수정
 
-`src/utils/Project/config.ts`에서 기수 번호만 추가
+`src/utils/project/config.ts`에서 기수 번호만 추가
 
 ```typescript
 // 변경 전
