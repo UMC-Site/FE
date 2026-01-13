@@ -100,7 +100,7 @@
     var(--color-background-2) 65%,
     var(--color-background-3) 84%
   );
-  
+
   --gradient-banner: linear-gradient(
     90deg,
     var(--color-banner-bg-4) 0%,
@@ -112,6 +112,7 @@
     90deg,
     var(--color-banner-bg-4) 0%,
     var(--color-recruit-11) 100%
+  );
 
   --gradient-shape-purple: linear-gradient(
     135deg,
