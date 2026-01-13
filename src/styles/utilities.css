@@ -13,7 +13,7 @@
   }
 
   .font-shippori {
-    font-family: 'Shippori Antique B1', sans-serif;
+    font-family: "Shippori Antique B1", sans-serif;
   }
 
   .pageContainer {
@@ -26,41 +26,89 @@
     }
   }
 
+  .border-gradient-box {
+    position: relative;
+    border-radius: clamp(0.4rem, 0.5vw, 0.68rem);
+  }
+  .border-gradient-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 0.17rem;
+    border-radius: inherit;
+    background: var(--gradient-box);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
   /* Animations */
   @keyframes float-1 {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(100px, -100px); }
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(100px, -100px);
+    }
   }
 
   @keyframes float-2 {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(-100px, 100px); }
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-100px, 100px);
+    }
   }
 
   @keyframes float-3 {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(-50px, -50px); }
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-50px, -50px);
+    }
   }
 
   @keyframes sparkle {
-    0%, 100% { opacity: 1; filter: brightness(1); }
-    50% { opacity: 0.9; filter: brightness(1.2); }
+    0%,
+    100% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+    50% {
+      opacity: 0.9;
+      filter: brightness(1.2);
+    }
   }
 
   @keyframes sparkle-text {
-    0%, 100% {
-      text-shadow: 0 0 2.5px rgba(255, 255, 255, 0.5), 0 0 5px rgba(255, 255, 255, 0.7);
+    0%,
+    100% {
+      text-shadow: 0 0 2.5px rgba(255, 255, 255, 0.5),
+        0 0 5px rgba(255, 255, 255, 0.7);
       -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
     }
     50% {
-      text-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 1);
+      text-shadow: 0 0 5px rgba(255, 255, 255, 1),
+        0 0 10px rgba(255, 255, 255, 1);
       -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
     }
   }
 
   @keyframes twinkling {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
+    0%,
+    100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 1;
+    }
   }
 
   @keyframes fade-in-up {
@@ -75,10 +123,20 @@
   }
 
   @keyframes bounce-in {
-    0% { opacity: 0; transform: scale(0.3); }
-    50% { transform: scale(1.05); }
-    70% { transform: scale(0.9); }
-    100% { opacity: 1; transform: scale(1); }
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   @keyframes reveal-from-left {
@@ -93,22 +151,50 @@
   }
 
   @keyframes shine {
-    0% { left: -100%; opacity: 0; }
-    50% { opacity: 1; }
-    100% { left: 100%; opacity: 0; }
+    0% {
+      left: -100%;
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      left: 100%;
+      opacity: 0;
+    }
   }
 
-  .animate-float-1 { animation: float-1 20s infinite ease-in-out; }
-  .animate-float-2 { animation: float-2 25s infinite ease-in-out; }
-  .animate-float-3 { animation: float-3 15s infinite ease-in-out; }
-  .animate-sparkle { animation: sparkle 2.5s infinite ease-in-out; }
-  .animate-sparkle-text { animation: sparkle-text 2s infinite ease-in-out; }
-  .animate-twinkling { animation: twinkling 2.5s infinite ease-in-out; }
-  .animate-fade-in-up { animation: fade-in-up 1s ease-out forwards; }
-  .animate-bounce-in { animation: bounce-in 1s ease-out forwards; }
-  .animate-reveal-from-left { animation: reveal-from-left 2s ease-out forwards; }
-  .animate-shine { animation: shine 4s infinite; }
-  
+  .animate-float-1 {
+    animation: float-1 20s infinite ease-in-out;
+  }
+  .animate-float-2 {
+    animation: float-2 25s infinite ease-in-out;
+  }
+  .animate-float-3 {
+    animation: float-3 15s infinite ease-in-out;
+  }
+  .animate-sparkle {
+    animation: sparkle 2.5s infinite ease-in-out;
+  }
+  .animate-sparkle-text {
+    animation: sparkle-text 2s infinite ease-in-out;
+  }
+  .animate-twinkling {
+    animation: twinkling 2.5s infinite ease-in-out;
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 1s ease-out forwards;
+  }
+  .animate-bounce-in {
+    animation: bounce-in 1s ease-out forwards;
+  }
+  .animate-reveal-from-left {
+    animation: reveal-from-left 2s ease-out forwards;
+  }
+  .animate-shine {
+    animation: shine 4s infinite;
+  }
+
   .project-section-title {
     @apply text-[clamp(1.6rem,3vw,2.25rem)] font-bold leading-tight text-intro;
   }
@@ -120,7 +206,7 @@
   .project-section-gap {
     @apply flex flex-col gap-[clamp(1.5rem,3vw,2.5rem)];
   }
-  
+
   /* Animations */
   .animate-fade-in {
     animation: fadeIn 0.3s ease-in-out;
