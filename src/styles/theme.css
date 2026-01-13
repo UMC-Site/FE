@@ -100,4 +100,21 @@
     var(--color-background-2) 65%,
     var(--color-background-3) 84%
   );
+
+  /* gradient shape */
+  --gradient-shape-purple: linear-gradient(
+    135deg,
+    var(--color-primary-500),
+    var(--color-secondary)
+  );
+  --gradient-shape-pink-orange: linear-gradient(
+    135deg,
+    var(--color-tertiary),
+    var(--color-quaternary)
+  );
+  --gradient-shape-pink: linear-gradient(
+    135deg,
+    var(--color-secondary),
+    var(--color-tertiary)
+  );
 }

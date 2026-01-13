@@ -47,7 +47,7 @@ const Intro = () => {
 
         <p
           className={clsx(
-            "mt-[1.6rem] w-[83.1rem] text-center font-semibold text-[2rem] text-gray-500 leading-14 max-sm:mt-[0.774rem] max-sm:w-150 max-sm:text-[1.2rem] max-sm:leading-[1.8rem]",
+            "mt-[1.6rem] max-w-[83.1rem] px-8 text-center font-semibold text-[2rem] text-gray-500 leading-14 max-sm:mt-[0.774rem] max-sm:max-w-full max-sm:text-[1.2rem] max-sm:leading-[1.8rem]",
             getFadeInUpClass(isVisible)
           )}
           style={{ animationDelay: getStaggerDelay(2, 0, 0.3) }}

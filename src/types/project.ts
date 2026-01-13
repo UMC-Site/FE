@@ -2,7 +2,7 @@ export type {
   FilterType,
   GenerationNumber,
   GenerationType,
-} from "@/utils/Project/config";
+} from "@/utils/project/config";
 
 export interface ProjectPerson {
   id: number;
@@ -25,7 +25,7 @@ export interface ProjectSubTitle {
 
 export interface Project {
   id: number;
-  type: import("@/utils/Project/config").GenerationType;
+  type: import("@/utils/project/config").GenerationType;
   projectWeb: string;
   projectMobile: string;
   projectDetailWeb: string;
