@@ -22,7 +22,7 @@ const Qna = () => {
         onSelectType={setSelectedType}
       />
 
-      <ListQna qnaList={selectedQna} />
+      <ListQna key={selectedType} qnaList={selectedQna} />
     </div>
   );
 };
