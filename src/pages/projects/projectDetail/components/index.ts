@@ -1,6 +1,6 @@
-export { default as Contribution } from "./contribution/Contribution";
-export { default as ContributionItem } from "./contribution/ContributionItem";
-export { default as Feel } from "./feel/Feel";
-export { default as FeelCard } from "./feel/FeelCard";
-export { default as Info } from "./info/Info";
-export { default as ProjectLink } from "./projectLink/ProjectLink";
+export { default as Contribution } from "./Contribution/Contribution";
+export { default as ContributionItem } from "./Contribution/ContributionItem";
+export { default as Feel } from "./Feel/Feel";
+export { default as FeelCard } from "./Feel/FeelCard";
+export { default as Info } from "./Info/Info";
+export { default as ProjectLink } from "./ProjectLink/ProjectLink";
