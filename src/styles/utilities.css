@@ -196,11 +196,11 @@
   }
 
   .project-section-title {
-    @apply text-[clamp(1.6rem,3vw,2.25rem)] font-bold leading-tight text-intro;
+    @apply text-[clamp(1.6rem,3vw,2.25rem)] font-bold leading-tight;
   }
 
   .project-body-text {
-    @apply text-[clamp(1.2rem,2.5vw,1.75rem)] leading-[1.65] text-intro;
+    @apply text-[clamp(1.2rem,2.5vw,1.75rem)] leading-[1.65];
   }
 
   .project-section-gap {

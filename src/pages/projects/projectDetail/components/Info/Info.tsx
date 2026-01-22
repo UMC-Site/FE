@@ -16,8 +16,8 @@ const Info = ({ imageUrl, title, description }: InfoProps) => {
       />
 
       <header className="pageContainer mx-auto mt-[clamp(1.5rem,3vw,2.5rem)] flex flex-col gap-[clamp(0.6rem,1.5vw,1rem)]">
-        <h1 className="project-section-title">{title}</h1>
-        <p className="project-body-text">{description}</p>
+        <h1 className="project-section-title text-intro">{title}</h1>
+        <p className="project-body-text text-intro">{description}</p>
       </header>
     </>
   );

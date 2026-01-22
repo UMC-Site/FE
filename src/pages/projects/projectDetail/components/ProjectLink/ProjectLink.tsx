@@ -13,12 +13,12 @@ const ProjectLink = ({ url }: ProjectLinkProps) => {
   };
 
   return (
-    <section className="project-section-gap mt-[clamp(5rem,10vw,7.5rem)]">
-      <h2 className="project-section-title">프로젝트</h2>
+    <section className="project-section-gap mt-[clamp(5rem,10vw,7.5rem)] ">
+      <h2 className="project-section-title text-intro ">프로젝트</h2>
       <a
         href={url}
         onClick={handleClick}
-        className="project-body-text hover:underline"
+        className="project-body-text text-intro hover:underline"
       >
         {url}
       </a>

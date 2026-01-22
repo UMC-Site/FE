@@ -18,7 +18,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           alt={project.title}
           loading="lazy"
           decoding="async"
-          className="aspect-video w-full cursor-pointer object-cover"
+          className="aspect-video w-full cursor-pointer object-cover transition-transform duration-300 hover:scale-110"
         />
       </Link>
       <div className="mt-[clamp(1rem,3vw,4rem)] w-full">

@@ -16,7 +16,7 @@ const Contribution = ({
 
   return (
     <section className={`${marginClass} project-section-gap`}>
-      <h2 className="project-section-title">참여</h2>
+      <h2 className="project-section-title text-intro">참여</h2>
       <ul className="flex flex-col gap-[clamp(1.2rem,2.5vw,1.88rem)]">
         {people.map((person) => (
           <li key={person.id}>
