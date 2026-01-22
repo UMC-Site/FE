@@ -23,11 +23,23 @@ const ItemQna = ({ question, answer }: ItemQnaProps) => {
           <div className="flex w-fit flex-col">
             <span className="font-medium">{question}</span>
 
-            {isOpen && (
-              <p className="mt-[clamp(1.15rem,3vw,4rem)] text-[clamp(1.1rem,2vw,2.6rem)] text-modal-2 leading-[1.4]">
-                {answer}
-              </p>
-            )}
+            <div
+              className={clsx(
+                "grid transition-[grid-template-rows] duration-300 ease-in-out",
+                isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+              )}
+            >
+              <div className="overflow-hidden">
+                <p
+                  className={clsx(
+                    "mt-[clamp(1.15rem,3vw,4rem)] whitespace-pre-line text-[clamp(1.1rem,2vw,2.6rem)] text-modal-2 leading-[1.4] transition-opacity duration-300",
+                    isOpen ? "opacity-100" : "opacity-0"
+                  )}
+                >
+                  {answer}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
