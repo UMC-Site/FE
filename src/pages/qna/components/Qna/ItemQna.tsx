@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useState } from "react";
 import ArrowDown from "../../../../assets/images/icons/arrowDown.svg";
 
 interface ItemQnaProps {
@@ -9,38 +9,6 @@ interface ItemQnaProps {
 
 const ItemQna = ({ question, answer }: ItemQnaProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [height, setHeight] = useState<string>("0px");
-
-  const contentRef = useRef<HTMLDivElement | null>(null);
-
-  useLayoutEffect(() => {
-    const el = contentRef.current;
-    if (!el) return;
-
-    if (isOpen) {
-      const scrollHeight = el.scrollHeight;
-      setHeight(`${scrollHeight}px`);
-
-      const timer = setTimeout(() => {
-        setHeight("auto");
-      }, 300);
-
-      return () => clearTimeout(timer);
-    } else {
-      if (height === "auto") {
-        const scrollHeight = el.scrollHeight;
-        setHeight(`${scrollHeight}px`);
-
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            setHeight("0px");
-          });
-        });
-      } else {
-        setHeight("0px");
-      }
-    }
-  }, [isOpen, answer]);
 
   return (
     <div className="w-full rounded-[clamp(0.28rem,1.5vw,1rem)] bg-qna-4 p-[clamp(1.15rem,3vw,4rem)]">
@@ -57,19 +25,14 @@ const ItemQna = ({ question, answer }: ItemQnaProps) => {
             <span className="font-medium">{question}</span>
 
             <div
-              style={{ height }}
-              className="overflow-hidden transition-[height] duration-300 ease-in-out"
+              className={clsx(
+                "overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out",
+                isOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0",
+              )}
             >
-              <div ref={contentRef}>
-                <p
-                  className={clsx(
-                    "mt-[clamp(1.15rem,3vw,4rem)] whitespace-pre-line text-[clamp(1.1rem,2vw,2.6rem)] text-modal-2 leading-[1.4] transition-opacity duration-300",
-                    isOpen ? "opacity-100" : "opacity-0",
-                  )}
-                >
-                  {answer}
-                </p>
-              </div>
+              <p className="mt-[clamp(1.15rem,3vw,4rem)] whitespace-pre-line text-[clamp(1.1rem,2vw,2.6rem)] text-modal-2 leading-[1.4]">
+                {answer}
+              </p>
             </div>
           </div>
         </div>
