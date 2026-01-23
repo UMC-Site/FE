@@ -25,15 +25,17 @@ const ItemQna = ({ question, answer }: ItemQnaProps) => {
 
             <div
               className={clsx(
-                "grid transition-[grid-template-rows] duration-300 ease-in-out",
-                isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                "grid min-h-0 transition-[grid-template-rows] duration-300 ease-in-out",
+                isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
               )}
             >
-              <div className="overflow-hidden">
+              <div className="min-h-0 overflow-hidden">
                 <p
                   className={clsx(
-                    "mt-[clamp(1.15rem,3vw,4rem)] whitespace-pre-line text-[clamp(1.1rem,2vw,2.6rem)] text-modal-2 leading-[1.4] transition-opacity duration-300",
-                    isOpen ? "opacity-100" : "opacity-0"
+                    "whitespace-pre-line text-[clamp(1.1rem,2vw,2.6rem)] text-modal-2 leading-[1.4] transition-opacity duration-300",
+                    isOpen
+                      ? "mt-[clamp(1.15rem,3vw,4rem)] opacity-100 visible pointer-events-auto"
+                      : "mt-0 opacity-0 invisible pointer-events-none",
                   )}
                 >
                   {answer}
@@ -46,7 +48,7 @@ const ItemQna = ({ question, answer }: ItemQnaProps) => {
         <img
           className={clsx(
             "absolute top-0 right-0 w-[clamp(1.6rem,2.5vw,3.6rem)] transition-transform duration-300",
-            isOpen && "rotate-180"
+            isOpen && "rotate-180",
           )}
           src={ArrowDown}
           alt="arrow"
