@@ -20,21 +20,7 @@ const ItemQna = ({ question, answer }: ItemQnaProps) => {
       >
         <div className="flex max-w-[90%] items-start gap-[clamp(0.316rem,0.7vw,1.1rem)] text-[clamp(1.3rem,2vw,3rem)] text-intro">
           <span className="shrink-0 font-semibold">Q.</span>
-
-          <div className="flex w-fit flex-col">
-            <span className="font-medium">{question}</span>
-
-            <div
-              className={clsx(
-                "overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out",
-                isOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0",
-              )}
-            >
-              <p className="mt-[clamp(1.15rem,3vw,4rem)] whitespace-pre-line text-[clamp(1.1rem,2vw,2.6rem)] text-modal-2 leading-[1.4]">
-                {answer}
-              </p>
-            </div>
-          </div>
+          <span className="font-medium">{question}</span>
         </div>
 
         <img
@@ -46,6 +32,23 @@ const ItemQna = ({ question, answer }: ItemQnaProps) => {
           alt="arrow"
         />
       </button>
+
+      <div
+        className={clsx(
+          "overflow-hidden transition-[max-height] duration-300 ease-in-out",
+          "will-change-[max-height] transform-[translateZ(0)]",
+          isOpen ? "max-h-[5000px]" : "max-h-0",
+        )}
+      >
+        <p
+          className={clsx(
+            "mt-[clamp(1.15rem,3vw,4rem)] whitespace-pre-line text-[clamp(1.1rem,2vw,2.6rem)] text-modal-2 leading-[1.4]",
+            "pl-[calc(2ch+clamp(0.5rem,0.7vw,1rem))]",
+          )}
+        >
+          {answer}
+        </p>
+      </div>
     </div>
   );
 };
