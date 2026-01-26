@@ -12,15 +12,15 @@ interface StageItemProps {
 const StageItem = ({ stage, isVisible, delay }: StageItemProps) => (
   <div
     className={clsx(
-      "flex w-[14.4rem] flex-col items-center text-center max-sm:w-28",
+      "flex w-[14.4rem] flex-col items-center text-center max-sm:w-28 max-lg:w-40",
       getFadeInUpClass(isVisible)
     )}
     style={{ animationDelay: delay }}
   >
-    <p className="font-normal text-[2rem] text-white leading-[2.4rem] max-sm:text-[1rem] max-sm:leading-[1.2rem]">
+    <p className="font-normal text-[2rem] text-white leading-[2.4rem] max-sm:text-[1rem] max-sm:leading-[1.2rem] max-lg:text-[1.6rem]">
       {stage.date}
     </p>
-    <p className="mt-[0.6rem] whitespace-nowrap font-semibold text-[2.4rem] text-white leading-[2.4rem] max-sm:mt-[0.588rem] max-sm:text-[1.4rem] max-sm:leading-[1.7rem]">
+    <p className="mt-[0.6rem] whitespace-nowrap font-semibold text-[2.4rem] text-white leading-[2.4rem] max-sm:mt-[0.588rem] max-sm:text-[1.4rem] max-sm:leading-[1.7rem] max-lg:text-[1.8rem]">
       {stage.title}
     </p>
     {/* 인원수 표시
