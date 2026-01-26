@@ -27,11 +27,11 @@ const ActivityItem = ({ activity, isVisible, index }: ActivityItemProps) => (
       />
     </div>
 
-    <div className="flex flex-col gap-[1.6rem] pt-[1.1rem] text-left max-sm:w-[18.1rem] max-sm:gap-[0.598rem] max-sm:pt-[0.422rem]">
-      <h4 className="font-semibold text-[2.4rem] text-white leading-[2.8rem] max-sm:text-[1.2rem] max-sm:leading-6">
+    <div className="flex flex-col gap-[1.6rem] pt-[1.1rem] text-left max-sm:w-[18.1rem] max-sm:gap-[0.598rem] max-sm:pt-[0.422rem] sm:gap-4 sm:pt-[0.7rem] md:gap-[1.2rem] md:pt-[0.85rem] lg:gap-[1.4rem] lg:pt-4">
+      <h4 className="font-semibold text-[2.4rem] text-white max-sm:text-[1.2rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[2rem] xl:text-[2.2rem]">
         {activity.title}
       </h4>
-      <p className="font-normal text-[1.8rem] text-white leading-12 max-sm:text-[1rem] max-sm:leading-[1.4rem]">
+      <p className="font-normal text-[1.8rem] text-white max-sm:text-[1rem] sm:text-[1.2rem] md:text-[1.4rem] lg:text-[1.6rem] xl:text-[1.7rem]">
         {activity.description}
       </p>
     </div>
