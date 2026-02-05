@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <footer className="flex w-full items-center justify-center bg-footer">
-      <div className="relative flex h-64 w-3/5 flex-col justify-center max-sm:h-40 max-sm:w-11/12">
+      <div className="relative flex h-64 w-[68%] flex-col justify-center max-sm:h-40 max-sm:w-full max-sm:px-[1.8rem]">
         <div className="flex items-center gap-3">
           <img src={Logo} alt="logo" className="w-10 max-sm:w-5" />
           <p className="font-semibold text-white text-xl max-sm:text-base">
@@ -37,7 +37,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-  return <div className="w-full bg-[var(--color-footer)]">Footer</div>;
 };
 
 export default Footer;
