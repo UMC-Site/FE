@@ -8,7 +8,7 @@ interface PeopleProps {
 
 const People = ({ data }: PeopleProps) => {
   return (
-    <div className="w-full flex flex-col">
+    <div className="flex w-full flex-col">
       <Title text="지원 대상" />
 
       <div className="flex flex-col gap-[clamp(0.4rem,0.6vw,0.8rem)]">

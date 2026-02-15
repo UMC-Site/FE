@@ -32,6 +32,8 @@ jobs:
 
       - name: Build project
         run: pnpm run build
+        env:
+          VITE_GA_ID: ${{ secrets.VITE_GA_ID }}
 
       - name: Upload dist artifact
         uses: actions/upload-artifact@v4

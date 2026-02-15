@@ -1,6 +1,6 @@
+import type { SNSType } from "@/types/recruit/recruit";
 import Title from "../Title/Title";
 import ListSNS from "./ListSNS";
-import type { SNSType } from "@/types/recruit/recruit";
 
 interface SNSProps {
   data: SNSType;
@@ -8,7 +8,7 @@ interface SNSProps {
 
 const SNS = ({ data }: SNSProps) => {
   return (
-    <div className="w-full flex flex-col">
+    <div className="flex w-full flex-col">
       <Title text="문의처" />
       <ListSNS data={data} />
 

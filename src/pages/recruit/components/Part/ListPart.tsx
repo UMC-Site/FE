@@ -13,17 +13,17 @@ const ListPart = ({ data }: ListPartProps) => {
 
   return (
     <>
-      <div className="w-full hidden min-[769px]:flex flex-wrap items-center gap-[clamp(1rem,2vw,3.2rem)]">
+      <div className="hidden w-full flex-wrap items-center gap-[clamp(1rem,2vw,3.2rem)] min-[769px]:flex">
         {data.map((item) => (
           <ItemPart key={item.id} data={item} />
         ))}
       </div>
 
-      <div className="w-full flex flex-col gap-[clamp(1rem,2vw,2rem)] min-[769px]:hidden">
-        {chunked.map((row, rowIndex) => (
+      <div className="flex w-full flex-col gap-[clamp(1rem,2vw,2rem)] min-[769px]:hidden">
+        {chunked.map((row) => (
           <div
-            key={rowIndex}
-            className="w-full flex items-center gap-[clamp(1rem,2vw,3.2rem)]"
+            key={row.map((item) => item.id).join("-")}
+            className="flex w-full items-center gap-[clamp(1rem,2vw,3.2rem)]"
           >
             {row.map((item) => (
               <ItemPart key={item.id} data={item} />

@@ -10,6 +10,7 @@ interface ItemFilterProps {
 const ItemFilter = ({ type, isSelected, onClick }: ItemFilterProps) => {
   return (
     <button
+      type="button"
       onClick={onClick}
       aria-pressed={isSelected}
       className={clsx(

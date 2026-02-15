@@ -1,5 +1,5 @@
-import ItemCompetency from "./ItemCompetency";
 import type { CompetencyType } from "@/types/recruit/recruit";
+import ItemCompetency from "./ItemCompetency";
 
 interface ListCompetencyProps {
   data: CompetencyType;
@@ -7,7 +7,7 @@ interface ListCompetencyProps {
 
 const ListCompetency = ({ data }: ListCompetencyProps) => {
   return (
-    <div className="w-full flex flex-col gap-[clamp(1.8rem,2vw,3rem)]">
+    <div className="flex w-full flex-col gap-[clamp(1.8rem,2vw,3rem)]">
       {data.map((item) => (
         <ItemCompetency key={item.id} data={item} />
       ))}

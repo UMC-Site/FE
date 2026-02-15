@@ -1,5 +1,5 @@
-import type { MembersItem } from "@/types/members/members";
 import { MEMBERS_META } from "@/constants/members/membersMeta";
+import type { MembersItem } from "@/types/members/members";
 import { loadImages } from "@/utils/members/loadImages";
 
 export const createMember = (

@@ -1,4 +1,4 @@
-import RecruitData from "@/mocks/recruit/recruitData";
+import type RecruitData from "@/mocks/recruit/recruitData";
 
 export type RecruitDataType = typeof RecruitData;
 

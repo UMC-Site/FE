@@ -15,7 +15,7 @@ const Members = () => {
   }, [selectedType]);
 
   return (
-    <div className="pageContainer flex flex-col gap-y-[clamp(1.62rem,4vw,3.73rem)] pb-[clamp(6rem,8vw,11.3rem)] ">
+    <div className="pageContainer flex flex-col gap-y-[clamp(1.62rem,4vw,3.73rem)] pb-[clamp(6rem,8vw,11.3rem)]">
       <Title text="Members" />
 
       <ListFilter />

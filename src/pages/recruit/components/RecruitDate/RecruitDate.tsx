@@ -1,6 +1,6 @@
+import type { RecruitDateType } from "@/types/recruit/recruit";
 import Title from "../Title/Title";
 import ListRecruitDate from "./ListRecruitDate";
-import type { RecruitDateType } from "@/types/recruit/recruit";
 
 interface RecruitDateProps {
   data: RecruitDateType;
@@ -8,7 +8,7 @@ interface RecruitDateProps {
 
 const RecruitDate = ({ data }: RecruitDateProps) => {
   return (
-    <div className="w-full flex flex-col">
+    <div className="flex w-full flex-col">
       <Title text="모집 기간" />
       <ListRecruitDate data={data} />
     </div>
