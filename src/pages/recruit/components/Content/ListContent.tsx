@@ -7,7 +7,7 @@ interface ListContentProps {
 
 const ListContent = ({ data }: ListContentProps) => {
   return (
-    <div className="w-full flex flex-col gap-[clamp(4.8rem,6vw,7.5rem)]">
+    <div className="flex w-full flex-col gap-[clamp(4.8rem,6vw,7.5rem)]">
       {data.map((section) => (
         <ItemContent key={section.id} data={section} />
       ))}

@@ -30,7 +30,11 @@ const StageBar = ({ isVisible }: StageBarProps) => {
                 className="flex items-center justify-center"
               >
                 <div className="relative z-2 flex h-[3.9rem] w-[3.6rem] items-center justify-center">
-                  <img src={StageDot} alt="stage dot" className="h-full w-full" />
+                  <img
+                    src={StageDot}
+                    alt="stage dot"
+                    className="h-full w-full"
+                  />
                 </div>
               </div>
             ))}
@@ -40,7 +44,10 @@ const StageBar = ({ isVisible }: StageBarProps) => {
         <div className="mt-[1.8rem] w-full max-w-360">
           <div className="mx-8 grid w-[calc(100%-4rem)] grid-cols-5 gap-0 md:mx-14 md:w-[calc(100%-7rem)] lg:mx-[5.4rem] lg:w-[calc(100%-10.8rem)]">
             {STAGE_DATA.map((stage, index) => (
-              <div key={`item-${stage.date}-${stage.title}`} className="flex items-end justify-center">
+              <div
+                key={`item-${stage.date}-${stage.title}`}
+                className="flex items-end justify-center"
+              >
                 <StageItem
                   stage={stage}
                   isVisible={isVisible}

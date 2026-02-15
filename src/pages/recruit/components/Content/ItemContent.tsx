@@ -8,8 +8,8 @@ interface ItemContentProps {
 
 const ItemContent = ({ data }: ItemContentProps) => {
   return (
-    <div className="w-full flex flex-col gap-[clamp(1.8rem,2.5vw,3.4rem)]">
-      <h3 className="text-[clamp(1.6rem,2vw,2.4rem)] font-semibold">
+    <div className="flex w-full flex-col gap-[clamp(1.8rem,2.5vw,3.4rem)]">
+      <h3 className="font-semibold text-[clamp(1.6rem,2vw,2.4rem)]">
         {data.season}
       </h3>
 

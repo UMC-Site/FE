@@ -7,14 +7,14 @@ interface ItemPeopleProps {
 
 const ItemPeople = ({ data }: ItemPeopleProps) => {
   return (
-    <div className="w-full flex items-start gap-[clamp(0.8rem,1vw,1.3rem)]">
+    <div className="flex w-full items-start gap-[clamp(0.8rem,1vw,1.3rem)]">
       <img
         src={PeopleIcon}
         alt="peopleIcon"
         className="w-[clamp(1.4rem,2vw,2.4rem)]"
       />
 
-      <p className="text-[clamp(1.2rem,1.5vw,2rem)] -mt-[0.1rem]">
+      <p className="-mt-[0.1rem] text-[clamp(1.2rem,1.5vw,2rem)]">
         {data.explain}
       </p>
     </div>

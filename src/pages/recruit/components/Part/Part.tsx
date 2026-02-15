@@ -8,7 +8,7 @@ interface PartProps {
 
 const Part = ({ data }: PartProps) => {
   return (
-    <div className="w-full flex flex-col">
+    <div className="flex w-full flex-col">
       <Title text="모집 파트" />
       <ListPart data={data} />
     </div>

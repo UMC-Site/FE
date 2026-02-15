@@ -10,21 +10,24 @@ const ItemMembers = ({ member }: ItemMembersProps) => {
   const { navigateTo } = useNavigation();
 
   return (
-    <li
-      className="flex w-full cursor-pointer flex-col items-center transition-all duration-200 ease-out hover:scale-[1.03] hover:shadow-lg"
-      onClick={() => member.link && navigateTo(member.link)}
-    >
-      <div className="mb-[clamp(0.4rem,1.5vw,1rem)] aspect-square w-full overflow-hidden rounded-[0.4rem]">
-        <img
-          src={member.image || Default}
-          alt={member.name}
-          className="h-full w-full object-cover"
-        />
-      </div>
+    <li className="w-full">
+      <button
+        type="button"
+        className="flex w-full flex-col items-center transition-all duration-200 ease-out hover:scale-[1.03] hover:shadow-lg"
+        onClick={() => member.link && navigateTo(member.link)}
+      >
+        <div className="mb-[clamp(0.4rem,1.5vw,1rem)] aspect-square w-full overflow-hidden rounded-[0.4rem]">
+          <img
+            src={member.image || Default}
+            alt={member.name}
+            className="h-full w-full object-cover"
+          />
+        </div>
 
-      <p className="w-full text-left font-semibold text-[clamp(1.2rem,2vw,2.4rem)]">
-        {member.name}
-      </p>
+        <p className="w-full text-left font-semibold text-[clamp(1.2rem,2vw,2.4rem)]">
+          {member.name}
+        </p>
+      </button>
     </li>
   );
 };

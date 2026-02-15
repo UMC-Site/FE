@@ -6,13 +6,13 @@ interface ItemRecruitDateProps {
 
 const ItemRecruitDate = ({ data }: ItemRecruitDateProps) => {
   return (
-    <div className="w-full grid grid-cols-[55%_45%] items-center">
+    <div className="grid w-full grid-cols-[55%_45%] items-center">
       <div className="flex items-center gap-[clamp(0.75rem,1vw,1.2rem)]">
-        <div className="w-[clamp(1.4rem,2vw,2.4rem)] h-[clamp(1.4rem,2vw,2.4rem)] rounded-full bg-white flex items-center justify-center text-[clamp(1rem,1.3vw,1.7rem)] font-semibold text-recruit-4 shrink-0">
+        <div className="flex h-[clamp(1.4rem,2vw,2.4rem)] w-[clamp(1.4rem,2vw,2.4rem)] shrink-0 items-center justify-center rounded-full bg-white font-semibold text-[clamp(1rem,1.3vw,1.7rem)] text-recruit-4">
           {data.id}
         </div>
 
-        <p className="text-[clamp(1.2rem,1.5vw,2rem)] font-semibold">
+        <p className="font-semibold text-[clamp(1.2rem,1.5vw,2rem)]">
           {data.step}
         </p>
       </div>

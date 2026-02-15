@@ -11,9 +11,9 @@ const ContributionItem = ({ person }: ContributionItemProps) => {
         {person.part}
       </span>
       <ul className="flex flex-wrap gap-[clamp(1rem,2vw,1.75rem)]">
-        {person.name.map((name, idx) => (
+        {person.name.map((name) => (
           <li
-            key={idx}
+            key={`${person.id}-${name}`}
             className="font-medium text-[clamp(1rem,2vw,1.5rem)] text-intro"
           >
             {name}

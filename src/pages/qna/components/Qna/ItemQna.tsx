@@ -26,7 +26,7 @@ const ItemQna = ({ question, answer }: ItemQnaProps) => {
         <img
           className={clsx(
             "absolute top-0 right-0 w-[clamp(1.6rem,2.5vw,3.6rem)] transition-transform duration-300",
-            isOpen && "rotate-180",
+            isOpen && "rotate-180"
           )}
           src={ArrowDown}
           alt="arrow"
@@ -36,14 +36,14 @@ const ItemQna = ({ question, answer }: ItemQnaProps) => {
       <div
         className={clsx(
           "overflow-hidden transition-[max-height] duration-300 ease-in-out",
-          "will-change-[max-height] transform-[translateZ(0)]",
-          isOpen ? "max-h-[5000px]" : "max-h-0",
+          "transform-[translateZ(0)] will-change-[max-height]",
+          isOpen ? "max-h-[5000px]" : "max-h-0"
         )}
       >
         <p
           className={clsx(
             "mt-[clamp(1.15rem,3vw,4rem)] whitespace-pre-line text-[clamp(1.1rem,2vw,2.6rem)] text-modal-2 leading-[1.4]",
-            "pl-[calc(2ch+clamp(0.5rem,0.7vw,1rem))]",
+            "pl-[calc(2ch+clamp(0.5rem,0.7vw,1rem))]"
           )}
         >
           {answer}

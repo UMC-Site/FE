@@ -1,6 +1,6 @@
+import type { InformationType } from "@/types/recruit/recruit";
 import Title from "../Title/Title";
 import ListInformation from "./ListInformation";
-import type { InformationType } from "@/types/recruit/recruit";
 
 interface InformationProps {
   data: InformationType;
@@ -8,7 +8,7 @@ interface InformationProps {
 
 const Information = ({ data }: InformationProps) => {
   return (
-    <div className="w-full flex flex-col">
+    <div className="flex w-full flex-col">
       <Title text="활동 안내" />
 
       <ListInformation data={data} />
