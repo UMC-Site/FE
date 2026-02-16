@@ -1,7 +1,7 @@
 import { images } from "@/utils/Recruit/loadImages";
 
 const RecruitData = {
-  formUrl: "https://forms.gle/xmwvr6PgY3hjdTJ88",
+  formUrl: "https://forms.gle/os6M2ScMrkh389DA8",
   activeDate: { id: 1, title: "2026.03 ~ 2026.08 [약 6개월]" },
   part: [
     { id: 1, title: "PM" },
@@ -134,9 +134,9 @@ const RecruitData = {
   information: [
     {
       id: 1,
-      explain: "회비는 5만 5천원입니다(프로젝트비 3만원이 별도로 발생합니다).",
+      explain: "회비는 5만원입니다(프로젝트비 3만원이 별도로 발생합니다).",
     },
-    { id: 2, explain: "3월 14일(18:00 예정) OT 필수로 참여하셔야 합니다." },
+    { id: 2, explain: "3월 13일(18:00 예정) OT 필수로 참여하셔야 합니다." },
     { id: 3, explain: "12주간 교육 기간에 각 파트별로 스터디가 진행됩니다." },
     { id: 4, explain: "방중 데모데이는 반드시 참여하셔야 합니다!" },
   ],
