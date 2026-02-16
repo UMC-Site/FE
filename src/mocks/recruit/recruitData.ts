@@ -151,8 +151,8 @@ const RecruitData = {
     {
       id: 2,
       title: "기타 문의는 카카오톡 오픈채팅방",
-      explain: "https://open.kakao.com/o/soEpBOCf",
-      url: "https://open.kakao.com/o/soEpBOCf",
+      explain: "https://open.kakao.com/o/sfXEDigi",
+      url: "https://open.kakao.com/o/sfXEDigi",
     },
   ],
 };
