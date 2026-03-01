@@ -1,7 +1,7 @@
 import { images } from "@/utils/Recruit/loadImages";
 
 const RecruitData = {
-  formUrl: "https://forms.gle/os6M2ScMrkh389DA8",
+  formUrl: "https://forms.gle/RswnDJJTfjD6LtcZ9",
   activeDate: { id: 1, title: "2026.03 ~ 2026.08 [약 6개월]" },
   part: [
     { id: 1, title: "PM" },
