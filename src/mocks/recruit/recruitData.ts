@@ -4,13 +4,13 @@ const RecruitData = {
   formUrl: "https://forms.gle/os6M2ScMrkh389DA8",
   activeDate: { id: 1, title: "2026.03 ~ 2026.08 [약 6개월]" },
   part: [
-    // { id: 1, title: "PM" },
-    // { id: 2, title: "Design" },
+    { id: 1, title: "PM" },
+    { id: 2, title: "Design" },
     { id: 3, title: "Android" },
     // { id: 4, title: "iOS" },
     { id: 5, title: "Web" },
-    // { id: 6, title: "Springboot" },
-    // { id: 7, title: "Node.js" },
+    { id: 6, title: "Springboot" },
+    { id: 7, title: "Node.js" },
   ],
 
   people: [
