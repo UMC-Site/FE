@@ -7,7 +7,7 @@ const RecruitData = {
     { id: 1, title: "PM" },
     { id: 2, title: "Design" },
     { id: 3, title: "Android" },
-    { id: 4, title: "iOS" },
+    // { id: 4, title: "iOS" },
     { id: 5, title: "Web" },
     { id: 6, title: "Springboot" },
     { id: 7, title: "Node.js" },
@@ -25,18 +25,18 @@ const RecruitData = {
   recruitDate: [
     {
       id: 1,
-      step: "서류 모집",
-      date: "2026.02.16(월) - 2026.02.27(금)",
+      step: "추가모집 서류 지원",
+      date: "2026.03.02(월) ~ 2026.03.05(목)",
     },
     {
       id: 2,
-      step: "서류 합격 발표",
-      date: "2026.03.01(일)",
+      step: "서류 합격 발표 및 면접 일정 조율",
+      date: "2026.03.02(월) ~ 2026.03.05(목)",
     },
     {
       id: 3,
       step: "면접 일자",
-      date: "2026.03.02(월) ~ 2026.03.06(금)",
+      date: "2026.03.03(화) ~ 2026.03.06(금)",
     },
     {
       id: 4,
